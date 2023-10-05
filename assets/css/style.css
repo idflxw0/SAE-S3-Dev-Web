@@ -134,3 +134,24 @@
     height: 47px;
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: start;
+        height: auto;
+    }
+
+    .navbarmenu,
+    .navbarlog-in {
+        flex-direction: column;
+        align-items: start;
+        gap: var(--gap-3xs);
+        width: 100%;
+    }
+
+    .navbarmenu b,
+    .navbarlog-in div {
+        margin-bottom: var(--gap-3xs);
+    }
+}
