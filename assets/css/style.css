@@ -61,32 +61,32 @@
 .site-footer .container .row{
     background-color: #2b2f32;
 }
-/*tout en bas */
+/************FOOTER AVEC LES PARTENARIATS ************/
 
 .partner-section {
-    background-color: #fff; /* Fond blanc */
-    color: #7e7e7e; /* Texte en gris */
-    padding: 10px 0; /* Espacement en haut et en bas */
-    display: flex; /* Utiliser Flexbox pour aligner les éléments sur la même ligne */
-    flex-wrap: wrap; /* Permettre le retour à la ligne si nécessaire */
-    justify-content: space-between; /* Espacement égal entre les éléments */
-    align-items: center; /* Aligner verticalement */
+    background-color: #fff;
+    color: #7e7e7e;
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Style for the partner images */
+
 .partner-images {
     display: flex;
-    flex-wrap: wrap; /* Permettre le retour à la ligne si nécessaire */
-    justify-content: flex-end; /* Aligner les images à droite */
-    align-items: center; /* Aligner verticalement */
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
     margin-top: -25px;
 }
 
 .partner-image {
-    width: 10.66%; /* Répartir les images en 6 colonnes sur une ligne */
-    padding: 10px; /* Espacement entre les images */
-    box-sizing: border-box; /* Inclure les bordures et les marges dans la largeur */
-    text-align: center; /* Centrer le contenu à l'intérieur de chaque emplacement */
+    width: 10.66%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .partner-image img {
@@ -94,13 +94,15 @@
     height: auto;
 }
 
-/* Style for the copyright text */
+
 .copyright-text {
     margin-top: 10px;
     width: 100%;
     font-size: 14px;
-    text-align: left; /* Aligner le texte tout à gauche */
+    text-align: left;
 }
+/************FOOTER AVEC LES PARTENARIATS ************/
+
 
 .col-md-3 {
     background-color: #2b2f32;
@@ -148,9 +150,9 @@
 }
 
 .social-icons img {
-    width: 30px; /* Largeur des images */
-    height: auto; /* Hauteur automatique pour maintenir les proportions */
-    margin-right: 10px; /* Espacement à droite de l'image */
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
 }
 
 
