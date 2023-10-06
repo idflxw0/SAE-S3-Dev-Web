@@ -39,3 +39,124 @@
     object-fit: cover;
 }
 
+/*ZONE FOOTER*/
+.site-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #2b2f32;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.site-footer .col-md-3 {
+    margin-bottom: 20px;
+}
+
+.site-footer h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.site-footer .container .row{
+    background-color: #2b2f32;
+}
+/*tout en bas */
+
+.partner-section {
+    background-color: #fff; /* Fond blanc */
+    color: #7e7e7e; /* Texte en gris */
+    padding: 10px 0; /* Espacement en haut et en bas */
+    display: flex; /* Utiliser Flexbox pour aligner les éléments sur la même ligne */
+    flex-wrap: wrap; /* Permettre le retour à la ligne si nécessaire */
+    justify-content: space-between; /* Espacement égal entre les éléments */
+    align-items: center; /* Aligner verticalement */
+}
+
+/* Style for the partner images */
+.partner-images {
+    display: flex;
+    flex-wrap: wrap; /* Permettre le retour à la ligne si nécessaire */
+    justify-content: flex-end; /* Aligner les images à droite */
+    align-items: center; /* Aligner verticalement */
+    margin-top: -25px;
+}
+
+.partner-image {
+    width: 10.66%; /* Répartir les images en 6 colonnes sur une ligne */
+    padding: 10px; /* Espacement entre les images */
+    box-sizing: border-box; /* Inclure les bordures et les marges dans la largeur */
+    text-align: center; /* Centrer le contenu à l'intérieur de chaque emplacement */
+}
+
+.partner-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style for the copyright text */
+.copyright-text {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 14px;
+    text-align: left; /* Aligner le texte tout à gauche */
+}
+
+.col-md-3 {
+    background-color: #2b2f32;
+    color: #fff;
+    padding: 20px;
+}
+    /*FORMULAIRE NEWSLETTER*/
+.newsletter-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.newsletter-form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newsletter-form button:hover {
+    background-color: #0056b3;
+}
+
+/* RÉSEAUX SOCIAUX */
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-icons li {
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    color: #007bff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.social-icons img {
+    width: 30px; /* Largeur des images */
+    height: auto; /* Hauteur automatique pour maintenir les proportions */
+    margin-right: 10px; /* Espacement à droite de l'image */
+}
+
+
+@media (max-width: 768px) {
+    .site-footer .col-md-3 {
+        width: 50%;
+    }
+}
+
