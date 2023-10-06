@@ -32,6 +32,8 @@
     --br-5xs: 8px;
 }
 
+
+
 .logo-casbt-icon {
     position: relative;
     width: 100%;
@@ -41,7 +43,7 @@
 
 /*ZONE FOOTER*/
 .site-footer {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
     background-color: #2b2f32;
@@ -67,6 +69,75 @@
     color: inherit;
     text-decoration: none;
 }
+
+
+
+.col-md-3 {
+    background-color: #2b2f32;
+    color: #fff;
+    padding: 20px;
+}
+
+/* FORMULAIRE NEWSLETTER */
+.newsletter-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 5px;
+}
+
+.newsletter-form button {
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newsletter-form button:hover {
+    background-color: transparent;
+    border: 2px solid #007bff;
+    color: #007bff;
+}
+
+
+
+/* RÉSEAUX SOCIAUX */
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-icons li {
+    margin-bottom: 10px;
+}
+
+
+.col-md-3 h4 {
+    margin-left: 30px;
+}
+
+.social-icons a {
+    color: #007bff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.social-icons img {
+    width: 25px;
+    height: auto;
+    margin-left: 110px;
+}
+
+.les-quatre {
+    margin: 30px;
+}
 /************FOOTER AVEC LES PARTENARIATS ************/
 
 .partner-section {
@@ -79,7 +150,6 @@
     align-items: center;
 
 }
-
 
 .partner-images {
     display: flex;
@@ -109,67 +179,13 @@
     text-align: left;
 }
 /************FOOTER AVEC LES PARTENARIATS ************/
-
-
-.col-md-3 {
-    background-color: #2b2f32;
-    color: #fff;
-    padding: 20px;
-}
-    /*FORMULAIRE NEWSLETTER*/
-.newsletter-form input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-}
-
-.newsletter-form button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.newsletter-form button:hover {
-    background-color: #0056b3;
-}
-
-/* RÉSEAUX SOCIAUX */
-.social-icons {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.social-icons li {
-    margin-bottom: 10px;
-}
-
-.social-icons a {
-    color: #007bff;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-}
-
-
-.social-icons img {
-    width: 30px;
-    height: auto;
-    margin-right: 10px;
-}
-
-
 @media (max-width: 768px) {
     .site-footer .col-md-3 {
         width: 50%;
     }
 }
+
+
+
 
 
