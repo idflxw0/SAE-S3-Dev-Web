@@ -14,6 +14,7 @@ body, h1, h2, h3, p {
     align-items: center;
 }
 
+
 .navbar-brand img {
     height: 40px;
     vertical-align: middle;
@@ -45,16 +46,21 @@ body, h1, h2, h3, p {
     color: #000;
 }
 
-.dropdown .dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: white;
-    padding: 10px;
-    margin-left: 254px;
-}
+/*.dropdown .dropdown-menu {*/
+/*    display: none;*/
+/*    position: absolute;*/
+/*    background-color: white;*/
+/*    padding: 10px;*/
+/*    margin-left: 254px;*/
+/*}*/
 
 .dropdown:hover .dropdown-menu {
     display: block;
+}
+
+.navbar.scroll {
+    background-color: #333; /* Change this to the desired color */
+    /* Add any other styles you want for the scrolled navbar */
 }
 
 .navbar-buttons button {
@@ -323,6 +329,86 @@ section{
     text-align: left;
 }
 
+.carousel-inner img{
+    width: auto;
+    max-height: 725px;
+    height: auto;
+}
+
+
+
+/*----------------------------------------------------------PAGE AGGLO--------------------------------------------------- */
+.home-agglo {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.text-agglo {
+    position: absolute;
+    text-align: center;
+}
+.lagglo-en {
+    margin: 0;
+}
+
+
+
+/* Goto Next */
+
+.goto-next {
+    border: 0;
+    bottom: 0;
+    display: block;
+    height: 5em;
+    left: 50%;
+    margin: 0 0 0 -5em;
+    overflow: hidden;
+    position: absolute;
+    text-indent: 10em;
+    white-space: nowrap;
+    width: 10em;
+    z-index: 1;
+}
+
+.goto-next:before {
+    background-image: url("images/arrow.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+    display: block;
+    height: 1.5em;
+    left: 50%;
+    margin: -0.75em 0 0 -1em;
+    position: absolute;
+    top: 50%;
+    width: 2em;
+    z-index: 1;
+}
+
+/* Spotlight */
+.spotlight {
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+/*----------------------------MEDIA QUERY---------------------------*/
+@media (max-width: 1980px) {
+    .transparent-navbar {
+        background-color: transparent !important;
+    }
+}
 
 /************FOOTER AVEC LES PARTENARIATS ************/
 @media (max-width: 1040px) {
