@@ -1,46 +1,78 @@
-:root {
-    /* fonts */
-    --font-roboto: Roboto;
-    --font-montserrat: Montserrat;
-
-    /* font sizes */
-    --font-size-base-8: 16.8px;
-    --font-size-2xl-6: 21.6px;
-    --font-size-xl: 20px;
-    --font-size-lg: 18px;
-    --font-size-11xl: 30px;
-    --font-size-21xl: 40px;
-
-    /* colors */
-    --cold-grey-white: #fff ;
-    --color-gray-100: #7e7e7e;
-    --cold-grey-90: #22242a;
-    --color-gray-200: rgba(0, 0, 0, 0.6);
-    --cold-grey-40: #9a9ea5;
-    --cold-grey-5: #f3f4f6;
-    --color-skyblue: #99cbe1;
-
-    /* Gaps */
-    --gap-3xs: 10px;
-    --gap-7xs: 6px;
-
-    /* Paddings */
-    --padding-xl: 20px;
-    --padding-5xs: 8px;
-
-    /* Border radiuses */
-    --br-5xs: 8px;
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
 }
+
 .navbar {
-    background-color: transparent; /* Définit la couleur de fond sur transparent */
+    background-color: white;
+    color: #fff;
 }
 
-.logo-casbt-icon {
-    position: relative;
-    width: 100%;
-    height: 45px;
-    object-fit: cover;
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.navbar-brand img {
+    height: 40px;
+    vertical-align: middle;
+}
+
+.navbar-menu {
+    list-style-type: none;
+    margin-right: 520px;
+    margin-top: 20px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+    color: darkgrey;
+}
+
+.navbar-menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar-buttons button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    margin-left: 254px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.navbar-buttons button {
+    background-color: transparent;
+    color: grey;
+    border: 2px solid grey;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.navbar-buttons button:hover {
+    background-color: darkgrey;
+    color: #000;
+}
+
 
 section{
     padding:  10px 100px 400px;
@@ -63,7 +95,7 @@ section{
      height: 100%;
      top: 0;
      left: 0;
-    max-height: 70%;
+     max-height: 70%;
  }
 
 .home .content{
@@ -86,13 +118,20 @@ section{
 }
 
 .home .content a{
-     background: #fff;
+     background: #0a53be;
      padding: 15px 35px;
-     color: #0a58ca;
+     color: #fff;
      font-size: 1.1em;
      font-weight: 500;
      text-decoration: none;
      border-radius: 2px;
+}
+
+.home .content a:hover{
+    background: darkblue;
+    color: #fff;
+    transform: scale(1.05);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 .home video{
       z-index: 000;
