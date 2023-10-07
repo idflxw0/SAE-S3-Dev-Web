@@ -12,7 +12,7 @@
     --font-size-21xl: 40px;
 
     /* colors */
-    --cold-grey-white: #fff;
+    --cold-grey-white: #fff ;
     --color-gray-100: #7e7e7e;
     --cold-grey-90: #22242a;
     --color-gray-200: rgba(0, 0, 0, 0.6);
@@ -31,8 +31,9 @@
     /* Border radiuses */
     --br-5xs: 8px;
 }
-
-
+.navbar {
+    background-color: transparent; /* Définit la couleur de fond sur transparent */
+}
 
 .logo-casbt-icon {
     position: relative;
@@ -41,10 +42,114 @@
     object-fit: cover;
 }
 
+section{
+    padding:  10px 100px 400px;
+}
+
+.home{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.home:before{
+     z-index: 777;
+     content: '';
+     position: absolute;
+     background: rgba(3,96,251,0.3);
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+    max-height: 70%;
+ }
+
+.home .content{
+     z-index: 888;
+     color: #fff;
+     width: 70%;
+     margin-top: 50px;
+ }
+
+.home .content h1{
+    font-size: 4em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 75px;
+    margin-bottom: 40px;
+}
+.home .content p{
+    margin-bottom: 65px;
+}
+
+.home .content a{
+     background: #fff;
+     padding: 15px 35px;
+     color: #0a58ca;
+     font-size: 1.1em;
+     font-weight: 500;
+     text-decoration: none;
+     border-radius: 2px;
+}
+.home video{
+      z-index: 000;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+}
+
+.slider-navigation{
+       z-index: 888;
+       position: relative;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       transform: translateY(80px);
+       margin-bottom: 12px;
+}
+
+.slider-navigation .nav-btn{
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+}
+
+.slider-navigation .nav-btn.active{
+    background: #0d6efd;
+}
+.slider-navigation .nav-btn:not(:last-child){
+     margin-right: 20px;
+}
+
+.slider-navigation .nav-btn:hover{
+      transform: scale(1.2);
+}
+
+.video-slide{
+    position: absolute;
+    width: 100%;
+    max-height: 70%; /* Maintain the height as 100% */
+    clip-path: circle(0% at 0 50%);
+}
+.video-slide.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 2s ease;
+    transition-property: clip-path;
+}
+
 /*ZONE FOOTER*/
 .site-footer {
     position: absolute;
-    bottom: 0;
     width: 100%;
     background-color: #2b2f32;
     color: #fff;
@@ -178,7 +283,18 @@
     font-size: 14px;
     text-align: left;
 }
+
+
 /************FOOTER AVEC LES PARTENARIATS ************/
+@media (max-width: 1040px) {
+    header {
+        padding: 12px 20px;
+    }
+    section{
+        padding: 100px 20px;
+    }
+}
+
 @media (max-width: 768px) {
     .site-footer .col-md-3 {
         width: 50%;
