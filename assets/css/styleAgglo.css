@@ -1,12 +1,24 @@
 body, html {
     margin: 0;
-    padding-top: 40px;
+    padding: 0;
     height: 100%;
 }
 
-.right-image {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.card-fill {
+    display: flex;
+    height: 100vh; /* Ensuring the card fills the viewport height */
+}
 
+.left-text, .right-image {
+    flex: 1; /* Each section takes up half the width of the card */
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    padding: 20px;
+}
+
+.right-image img {
+    width: 100%; /* Ensuring the image takes the full width of its container */
+    height: 100%; /* Ensuring the image takes the full height of its container */
+    object-fit: cover; /* Ensuring the image covers the area without stretching */
 }
