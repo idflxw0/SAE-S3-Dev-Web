@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CASBT</title>
+  <link rel="stylesheet" href="assets/css/demarches.css">
+  <link rel="stylesheet" href="./assets/cssbootstrap/bootstrap.min.css">
+  <script src="./assets/js/script.js" type="module"></script>
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<header>
+  <div id="wrap-page">
+    <nav class="navbar">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">
+          <img src="./assets/images/CASBT_logo.png" alt="Logo">
+        </a>
+        <ul class="navbar-menu">
+          <li><a href="./index.html">Accueil</a></li>
+          <li><a href="./Actualités.html">Actualités</a></li>
+          <li><a href="./A propos.html">À propos</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Infos pratiques</a>
+            <ul class="dropdown-menu">
+              <li><a href="./Nos démarches.html">Nos démarches</a></li>
+              <li><a href="#">Notre agglomération</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="navbar-buttons">
+          <button class="btn btn-sm btn-outline-secondary">S’inscrire</button>
+          <button class="btn btn-sm btn-outline-secondary">Connexion</button>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="home">
+  <video class="video-slide active" src="assets/videos/plage2.mp4" autoplay muted loop></video>
+
+
+  <div class="content active">
+    <h1>Nous vous accompagnons<span> lors de vos démarches</span></h1>
+    <p>Notre équipe se tient à votre disposition 24h/24<br>Merci de nous faire confiance</p>
+  </div>
+
+  <div class="slider-navigation">
+    <div class="nav-btn active"></div>
+  </div>
+</section>
+
+<!--
+
+<section class="home">
+  <video class="video-slide active" src="assets/videos/plage1.mp4" autoplay muted loop></video>
+  <div class="content active">
+    <h1>Nous vous accompagnons<br><span>lors de vos démarches</span></h1>
+    <p>Une question ? Besoin d'aide ? Tout est à votre disposition !</p>
+  </div>
+</section>
+-->
+
+<div class="container-contact">
+  <span class="big-circle"></span>
+  <img src="assets/images/shape.png" class="square">
+  <div class="form-contact">
+    <div class="contact-info">
+      <h3 class = title-ctc>Let's get in touch</h3>
+      <p class="text">
+        Communauté d’Agglomération<br>GRAND SUB CARAIBE<br>Horaires d'ouverture : Du lundi au vendredi, de 7h30 à 13h00 et de 14h30 à 17h.
+      </p>
+      <p></p>
+
+      <div class="info">
+        <div class="information">
+          <img src="assets/images/location.png" class="icon" alt="">
+          <p>Rue Bébian - 97100 Basse Terre</p>
+        </div>
+        <div class="information">
+          <img src="assets/images/email.png" class="icon" alt="">
+          <p>Gagsc@societe.com</p>
+        </div>
+        <div class="information">
+          <img src="assets/images/phone2.png" class="icon" alt="">
+          <p>05 90 99 63 20</p>
+        </div>
+      </div>
+
+      <div class="social-media">
+        <p>Suivez-nous :</p>
+        <div class="social-icons2">
+            <a href="">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <span class="circle one"></span>
+      <span class="circle two"></span>
+
+      <form action="formcases">
+        <h3 class="title-form">Contactez-nous</h3>
+        <div class="input-container">
+          <input type="text" name="name" class="input">
+          <label for=>Nom</label>
+          <span>Nom</span>
+        </div>
+        <div class="input-container">
+          <input type="email" name="name" class="input">
+          <label for=>Email</label>
+          <span>Email</span>
+        </div>
+        <div class="input-container">
+          <input type="tel" name="name" class="input">
+          <label for=>Telephone</label>
+          <span>Telephone</span>
+        </div>
+        <div class="input-container textarea">
+          <textarea name="message" class="input"></textarea>
+          <label for=>Message</label>
+          <span>Message</span>
+        </div>
+        <input type="submit" value="Envoyer" class="btnForm"/>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h4>Contactez-nous</h4>
+        <p class="text-align-center">Nos services sont à votre disposition du lundi au vendredi de 8h00 à 14h30.</p>
+        <div class="contact-info">
+          <div class="address">
+            <img src="assets/images/loc.png" alt="adresse">
+            <p>Grand Sud Caraïbe 12 rue Bébian, 97100 Basse-Terre</p>
+          </div>
+          <div class="phone">
+            <img src="assets/images/phone.png" alt="phone">
+            <p>05 90 99 63 20</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <h4>NewsLetter</h4>
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" name="email" placeholder="Prénom" required>
+        </form>
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" name="email" placeholder="Email" required>
+          <button type="submit">SOUSCRIVEZ</button>
+        </form>
+      </div>
+      <div class="col-md-3">
+        <h4>Retrouvez-nous sur</h4>
+        <ul class="social-icons">
+          <li><a href="https://www.facebook.com/?locale=fr_FR"><img src="assets/images/facebook.jpg"
+                                                                    alt="Facebook"></a></li>
+          <li><a href="https://www.youtube.com/"><img src="assets/images/yt.png" alt="Youtube"> </a></li>
+          <li><a href="https://twitter.com/?lang=fr"><img src="assets/images/x.png" alt="X"> </a></li>
+          <li>
+            <a href="https://www.linkedin.com/home?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=fr"><img
+                    src="assets/images/linked.jpg" alt="LinkedIn"></a></li>
+          <li><a href="https://www.instagram.com/"><img src="assets/images/yt.png" alt="Instagram"></a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h4>Autres</h4>
+        <div class="les-quatre">
+          <p><a href="#">Plan du site</a></p>
+          <p><a href="#">Mentions légales</a></p>
+          <p><a href="#">FAQs</a></p>
+          <p><a href="#">Accessibilité</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="partner-section">
+    <div class="container">
+      <div class="copyright-text">
+        ©2023 Tous Droits Réservés
+      </div>
+    </div>
+    <div class="container partner-images">
+      <div class="partner-image"><img src="assets/images/eur.png" alt="eur"></div>
+      <div class="partner-image"><img src="assets/images/auvergne.png" alt="auvergne"></div>
+      <div class="partner-image"><img src="assets/images/ain.png" alt="ain"></div>
+      <div class="partner-image"><img src="assets/images/geneve.png" alt="geneve"></div>
+      <div class="partner-image"><img src="assets/images/cern.png" alt="cern"></div>
+      <div class="partner-image"><img src="assets/images/genevois.png" alt="genevois"></div>
+    </div>
+  </div>
+
+</footer>
+
+
+</body>
+
+</html>
