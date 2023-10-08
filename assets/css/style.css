@@ -3,17 +3,28 @@ body, h1, h2, h3, p {
     padding: 0;
 }
 
-.navbar {
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: white;
-    color: #fff;
+    /*color: #fff;*/
+    z-index: 1000;
+    transition: all .50s ease;
 }
+
+header.sticky {
+
+    background: transparent;
+}
+
 
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 
 .navbar-brand img {
     height: 40px;
@@ -46,21 +57,16 @@ body, h1, h2, h3, p {
     color: #000;
 }
 
-/*.dropdown .dropdown-menu {*/
-/*    display: none;*/
-/*    position: absolute;*/
-/*    background-color: white;*/
-/*    padding: 10px;*/
-/*    margin-left: 254px;*/
-/*}*/
+.dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    margin-left: 254px;
+}
 
 .dropdown:hover .dropdown-menu {
     display: block;
-}
-
-.navbar.scroll {
-    /*background-color: #333; !* Change this to the desired color *!*/
-    /* Add any other styles you want for the scrolled navbar */
 }
 
 .navbar-buttons button {
@@ -82,6 +88,8 @@ body, h1, h2, h3, p {
 
 section{
     padding:  10px 100px 400px;
+    position : relative;
+    margin-top: 75px;
 }
 
 .home{
@@ -179,6 +187,8 @@ section{
 .slider-navigation .nav-btn:hover{
       transform: scale(1.2);
 }
+
+
 
 .video-slide{
     position: absolute;
@@ -329,19 +339,6 @@ section{
     text-align: left;
 }
 
-.carousel-inner img{
-    width: auto;
-    max-height: 725px;
-    height: auto;
-}
-
-
-/*----------------------------MEDIA QUERY---------------------------*/
-@media (max-width: 1980px) {
-    .transparent-navbar {
-        background: transparent;
-    }
-}
 
 /************FOOTER AVEC LES PARTENARIATS ************/
 @media (max-width: 1040px) {
