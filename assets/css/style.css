@@ -85,9 +85,11 @@ header.sticky {
     color: #000;
 }
 
+/*ZONE CARROUSSEL VIDEO*/
+
 
 section{
-    padding:  10px 100px 400px;
+    padding:  10px 100px 650px;
     position : relative;
     margin-top: 75px;
 }
@@ -163,8 +165,8 @@ section{
        display: flex;
        justify-content: center;
        align-items: center;
-       transform: translateY(80px);
-       margin-bottom: 12px;
+       transform: translateY(250px);
+
 }
 
 .slider-navigation .nav-btn{
@@ -201,6 +203,62 @@ section{
     transition: 2s ease;
     transition-property: clip-path;
 }
+
+/*ZONE ACTU*/
+
+.title-actu{;
+    font : 700 45px "Montserrat", sans-serif;
+    z-index: 900;
+    color: #0371A4;
+    position:relative;
+    top : -170px;
+    margin-left: 65px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.actu-background{
+    background-color: #efefef;
+    border-radius: 17px;
+    width: 1600px;
+    height: 1700px;
+    position: relative;
+    margin-top: -200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section .animate{
+    opacity: 0;
+    filter: blur(5px);
+    transition: 1s;
+}
+
+section.show-animate .animate{
+    filter: blur(0);
+    opacity: 1;
+}
+
+.actualités .first-actu .animate {
+    transform: translateX(-100%);
+}
+
+.actualités .text-first-actu .animate {
+    transform: translateX(100%);
+}
+
+.actualités.show-animate .animate {
+    transform: translateX(0);
+}
+
+.first-actu img {
+    z-index: 1000;
+    width: 60%;
+    margin-left: 80px;
+    margin-top: 80px;
+    height: auto;
+    border-radius: 17px;
+}
+
 
 /*ZONE FOOTER*/
 .site-footer {
