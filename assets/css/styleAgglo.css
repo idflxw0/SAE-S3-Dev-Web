@@ -2,23 +2,106 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
 .card-fill {
     display: flex;
-    height: 100vh; /* Ensuring the card fills the viewport height */
+    height: 100vh;
+    /*border: 1px solid #ddd;  !* Light grey border *!*/
+    /*box-shadow: 0px 4px 8px rgba(0,0,0,0.1);  !* Subtle shadow for a lifted effect *!*/
+    border-radius: 10px;
 }
 
-.left-text, .right-image {
-    flex: 1; /* Each section takes up half the width of the card */
+.left-text {
+    flex: 1;
     display: flex;
-    align-items: center; /* Vertically center the content */
-    justify-content: center; /* Horizontally center the content */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
     padding: 20px;
+    background: linear-gradient(160deg, #f5f5f5, #e0e0e0); /* Soft grey gradient background */
+    color: #333;
+    box-shadow: 10px 0px 15px rgba(0,0,0,0.1); /* Shadow to add some depth */
+}
+
+.h3-title-left {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    /*text-shadow: 2px 2px 4px rgba(0,0,0,0.6); !* Text shadow for better readability *!*/
+}
+
+.p-text-left {
+    font-size: 18px;
+    line-height: 1.6;
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly white transparent bg */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1); /* Text box shadow */
+}
+
+.right-image {
+    flex: 1;
 }
 
 .right-image img {
-    width: 100%; /* Ensuring the image takes the full width of its container */
-    height: 100%; /* Ensuring the image takes the full height of its container */
-    object-fit: cover; /* Ensuring the image covers the area without stretching */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+
 }
+ .right-image img:hover {
+     transform: scale(1.1);
+}
+
+
+/* Additional CSS for animations */
+.left-text, .right-image {
+    opacity: 0;
+    transform: translateY(30px);
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.left-text {
+    animation-name: slideInText;
+}
+
+.right-image {
+    animation-name: slideInImage;
+}
+
+@keyframes slideInText {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInImage {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add this to your CSS */
+.left-text.animate, .right-image.animate {
+    animation-name: slideInText; /* or slideInImage respectively */
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+/*-------------------------RIGHT TEXT <-> LEFT IMAGE------------------------------*/
