@@ -259,6 +259,19 @@ section.show-animate .animate{
     border-radius: 17px;
 }
 
+.text-first-actu #category{
+    background-color: #1B8CC1;
+    width: 300px;
+    height:70px;
+    font : 700 22px "Montserrat", sans-serif;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    position:relative;
+    left:975px;
+    margin-top: -150px;
+    z-index: 1100;
+}
 
 /*ZONE FOOTER*/
 .site-footer {
