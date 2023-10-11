@@ -15,6 +15,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+document.addEventListener("scroll", function() {
+    const animateElements = document.querySelectorAll('.animate');
+
+    animateElements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+
+        // Only add the class when the element is within a certain range of the viewport
+        if (elementTop < window.innerHeight - 10 && elementTop >= 0) { // Adjusted range
+            element.classList.add('show-animate');
+        } else {
+            element.classList.remove('show-animate');
+        }
+    });
+});
+
+
+
+
 
 
 

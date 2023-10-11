@@ -3,6 +3,7 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: 'Roboto', sans-serif;
+    scroll-snap-type: y mandatory;
 }
 
 .card-fill {
@@ -105,5 +106,18 @@ body, html {
     animation-duration: 1s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
+}
+
+
+/*--------------------ANIMATION *------------------- */
+
+.animate {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1.5s, opacity 1.5s; /* Adjusted duration */
+}
+.show-animate {
+    transform: translateX(0);
+    opacity: 1;
 }
 
