@@ -42,10 +42,10 @@ let sectionS = document.querySelectorAll('section');
 window.onscroll = () => {
     sectionS.forEach(sec => {
         let top = window.scrollY;
-        let offset = sec.offsetTop - 175;
+        let offset = sec.offsetTop - 185;
         let height = sec.offsetHeight;
 
-        if(top + 500 >= offset && top  < offset + height + 100)
+        if(top + 500 >= offset && top  < offset + height + 300)
             sec.classList.add('show-animate');
         else
             sec.classList.remove('show-animate');
