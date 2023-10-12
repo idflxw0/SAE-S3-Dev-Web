@@ -2,9 +2,112 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+
     font-family: 'Roboto', sans-serif;
-    scroll-snap-type: y mandatory;
+
 }
+body{
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    min-height: 100vh;
+    /*background: #fff;*/
+
+}
+
+
+/*--------------HOME--------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.home{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #094b65, transparent);
+    z-index: 10;
+}
+
+.home img{
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.home #text{
+    position: absolute;
+    font-size: 10vw;
+    color: #094b65;
+    text-align: center;
+    line-height: 0.5em;
+    font-family: 'Rancho', cursive;
+    transform: translateY(-50%);
+}
+
+.home #text span{
+    font-size: 0.20em;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
+
+#btn{
+    padding: 8px 30px;
+    display: inline-block;
+    text-decoration: none;
+    background: #fff;
+    color: #094b65;
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border-radius: 40px;
+    transform: translateY(100px);
+}
+
+.sea{
+    position: relative;
+    padding: 100px;
+    background: #094b65;
+}
+
+.sea h2{
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.sea p{
+    font-size: 1em;
+    color: #fff;
+}
+
+
+
+
+/*-------------- END HOME--------------*/
+
+
 
 .card-fill {
     display: flex;
@@ -59,6 +162,9 @@ body, html {
  .right-image img:hover {
      transform: scale(1.1);
 }
+.card-fill .right-image {
+    overflow: hidden; /* Add this to hide any overflow */
+}
 
 
 /* Additional CSS for animations */
@@ -108,16 +214,29 @@ body, html {
     animation-fill-mode: forwards;
 }
 
-
 /*--------------------ANIMATION *------------------- */
 
-.animate {
-    transform: translateX(-100%);
+.card-fill {
     opacity: 0;
-    transition: transform 1.5s, opacity 1.5s; /* Adjusted duration */
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
 }
-.show-animate {
-    transform: translateX(0);
+
+.card-fill.visible {
     opacity: 1;
+    transform: translateY(0);
 }
+
+.card-fill .animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.card-fill.show-animate .animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 
