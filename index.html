@@ -5,22 +5,16 @@
     <meta charset="UTF-8">
     <title>CASBT</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="./assets/cssbootstrap/bootstrap.min.css">
+
 
 </head>
 
 <body>
     <header>
-        <div id="wrap-page">
-            <!--****************Beginning of the NAVBAR****************************-->
-            <nav class="navbar navbar-expand-lg fixed-top">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="./index.html">
-                        <img
-                                class="logo-casbt-icon"
-                                alt=""
-                                src="./assets/images/CASBT_logo.png"
-                        />
+        <nav class="navbar">
+                <div class="left-elements">
+                    <a class="navbar-logo" href="./index.html">
+                        <img src="./assets/images/CASBT_logo.png" alt="Logo">
                     </a>
                     <ul class="navbar-menu">
                         <li><a href="./index.html">Accueil</a></li>
@@ -34,58 +28,26 @@
                             </ul>
                         </li>
                     </ul>
-                    <div class="navbar-buttons">
-                        <button class="btn btn-sm btn-outline-secondary">S’inscrire</button>
-                        <button class="btn btn-sm btn-outline-secondary">Connexion</button>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./index.html">Accueil</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="./Actualités.html">Actualités</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="./A propos.html">À propos</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                   aria-expanded="false">
-                                    Infos pratiques
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <form class="d-flex">
-                            <button class="btn btn-sm btn-outline-secondary mx-1">S’inscrire</button>
-                            <button class="btn btn-sm btn-outline-secondary">Connexion</button>
-                        </form>
-                    </div>
                 </div>
+                <div class="navbar-buttons">
+                    <button class="btn btn-sm btn-outline-secondary">S’inscrire</button>
+                    <button class="btn btn-sm btn-outline-secondary">Connexion</button>
+                </div>
+            <img src="assets/images/menu-btn.png" class="btn-responsive-menu">
+
             </nav>
-        </div> <!--****************END of the NAVBAR****************************-->
+
     </header>
 
-    <section class="home">
+
+    <section class="slider">
         <video class="video-slide active" src="assets/videos/plage2.mp4" autoplay muted loop></video>
         <video class="video-slide" src="assets/videos/plage1.mp4" autoplay muted loop></video>
         <video class="video-slide" src="assets/videos/poissons.mp4"  autoplay muted loop></video>
         <video class="video-slide" src="assets/videos/oiseau.mp4"  autoplay muted loop></video>
         <video class="video-slide" src="assets/videos/tortue.mp4"  autoplay muted loop></video>
 
-        <div class="content active">
+        <div class="text-slider">
             <h1>La Communauté d'Agglomération<br><span>du Sud Basse-Terre</span></h1>
             <p>Que vous soyez résident de longue date ou tout simplement curieux de connaître davantage notre région, nous sommes ravis de vous accueillir ici. Merci de votre visite et bonne découverte !</p>
             <a href="#">Découvrez-nous</a>
@@ -100,72 +62,40 @@
         </div>
     </section>
 
-    <script type="text/javascript">
-        const btns = document.querySelectorAll(".nav-btn");
-        const slides = document.querySelectorAll(".video-slide");
-        const contents = document.querySelectorAll(".content");
-        var sliderNav = function(manual) {
-            btns.forEach((btn) => {
-                btn.classList.remove("active");
-            });
+    div class="conteneur-body">
+    <div class="actu-background">
+        <div class="title-actu">Les actualités du moment</div>
+        <section class="first-actu">
+            <img class="animate" src="assets/images/Actu1-Déchets.png">
+            <div class="text-first-actu">
+                <div id="category1" class="animate">Déchets - Environnement</div>
+                <div id="title1" class="animate" >La collecte en apport volontaire</div>
+            </div>
+        </section>
 
+        <section class="second-actu">
+            <img class="animate" src="assets/images/actu2-Rentree.jpg">
+            <img class="animate third-actu" src="assets/images/actu3-appel.png">
+            <div class="text-second-actu">
+                <div id="category2" class="animate">Evènement</div>
+                <div id="title2" class="animate" >Bonne rentrée 2023/2024</div>
+            </div>
 
-            slides.forEach((slide) => {
-                slide.classList.remove("active");
-            });
+            <div class="text-third-actu">
+                <div id="category3" class="animate">Transport</div>
+                <div id="title3" class="animate" >Mise en place de rotations Maritimes entre les ports de Terre de Haut et Terre de Bas</div>
+            </div>
+        </section>
+    </div>
 
-            contents.forEach((content) => {
-                content.classList.remove("active");
-            });
+    <div class="au-quotidien">
 
-            btns[manual].classList.add("active");
-            slides[manual].classList.add("active");
-            contents[manual].classList.add("active");
-
-        }
-
-            btns.forEach((btn, i) => {
-                btn.addEventListener("click", () => {
-                    sliderNav(i)
-                });
-            });
-
-    </script>
-
-
-    <div class="conteneur-body">
-        <div class="actu-background">
-            <div class="title-actu">Les actualités du moment</div>
-            <section class="first-actu">
-                <img class="animate" src="assets/images/Actu1-Déchets.png">
-                <div class="text-first-actu">
-                    <div id="category1" class="animate">Déchets - Environnement</div>
-                    <div id="title1" class="animate" >La collecte en apport volontaire</div>
-                </div>
-            </section>
-
-            <section class="second-actu">
-                <img class="animate" src="assets/images/actu2-Rentree.jpg">
-                <img class="animate third-actu" src="assets/images/actu3-appel.png">
-                <div class="text-second-actu">
-                    <div id="category2" class="animate">Evènement</div>
-                    <div id="title2" class="animate" >Bonne rentrée 2023/2024</div>
-                </div>
-
-                <div class="text-third-actu">
-                    <div id="category3" class="animate">Transport</div>
-                    <div id="title3" class="animate" >Mise en place de rotations Maritimes entre les ports de Terre de Haut et Terre de Bas</div>
-                </div>
-            </section>
-        </div>
-
-        <div class="au-quotidien">
-
-        </div>
+    </div>
     </div>
 
 
     <script src="./assets/js/script.js" type="module"></script>
+
 
     <footer class="site-footer">
         <div class="container">
@@ -218,7 +148,7 @@
                 </div>
             </div>
         </div>
-    
+
         <div class="partner-section">
             <div class="container">
                 <div class="copyright-text">
@@ -234,21 +164,11 @@
                 <div class="partner-image"><img src="assets/images/genevois.png" alt="genevois"></div>
             </div>
         </div>
-    
+
     </footer>
 
 
-    <!--****************Insertion of script for navbar****************************-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-            crossorigin="anonymous"></script>
-    <!--****************End of script for navbar****************************-->
 
-    <!--    &lt;!&ndash; Start of Bootstrap JS, Popper.js, and jQuery &ndash;&gt;-->
-    <!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>-->
-    <!--    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>-->
-    <!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>-->
-    <!--    &lt;!&ndash; END of Bootstrap JS, Popper.js, and jQuery &ndash;&gt;-->
 </body>
 
 </html>
