@@ -5,16 +5,15 @@
     <meta charset="UTF-8">
     <title>CASBT</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="./assets/cssbootstrap/bootstrap.min.css">
+
 
 </head>
 
 <body>
     <header>
-        <div id="wrap-page">
-            <nav class="navbar">
-                <div class="container">
-                    <a class="navbar-brand" href="./index.html">
+        <nav class="navbar">
+                <div class="left-elements">
+                    <a class="navbar-logo" href="./index.html">
                         <img src="./assets/images/CASBT_logo.png" alt="Logo">
                     </a>
                     <ul class="navbar-menu">
@@ -29,24 +28,26 @@
                             </ul>
                         </li>
                     </ul>
-                    <div class="navbar-buttons">
-                        <button class="btn btn-sm btn-outline-secondary">S’inscrire</button>
-                        <button class="btn btn-sm btn-outline-secondary">Connexion</button>
-                    </div>
                 </div>
+                <div class="navbar-buttons">
+                    <button class="btn btn-sm btn-outline-secondary">S’inscrire</button>
+                    <button class="btn btn-sm btn-outline-secondary">Connexion</button>
+                </div>
+            <img src="assets/images/menu-btn.png" class="btn-responsive-menu">
+
             </nav>
-        </div>
 
     </header>
 
-    <section class="home">
+
+    <section class="slider">
         <video class="video-slide active" src="assets/videos/plage2.mp4" autoplay muted loop></video>
         <video class="video-slide" src="assets/videos/plage1.mp4" autoplay muted loop></video>
         <video class="video-slide" src="assets/videos/poissons.mp4"  autoplay muted loop></video>
         <video class="video-slide" src="assets/videos/oiseau.mp4"  autoplay muted loop></video>
         <video class="video-slide" src="assets/videos/tortue.mp4"  autoplay muted loop></video>
 
-        <div class="content active">
+        <div class="text-slider">
             <h1>La Communauté d'Agglomération<br><span>du Sud Basse-Terre</span></h1>
             <p>Que vous soyez résident de longue date ou tout simplement curieux de connaître davantage notre région, nous sommes ravis de vous accueillir ici. Merci de votre visite et bonne découverte !</p>
             <a href="#">Découvrez-nous</a>
@@ -61,67 +62,35 @@
         </div>
     </section>
 
-    <script type="text/javascript">
-        const btns = document.querySelectorAll(".nav-btn");
-        const slides = document.querySelectorAll(".video-slide");
-        const contents = document.querySelectorAll(".content");
-        var sliderNav = function(manual) {
-            btns.forEach((btn) => {
-                btn.classList.remove("active");
-            });
+    div class="conteneur-body">
+    <div class="actu-background">
+        <div class="title-actu">Les actualités du moment</div>
+        <section class="first-actu">
+            <img class="animate" src="assets/images/Actu1-Déchets.png">
+            <div class="text-first-actu">
+                <div id="category1" class="animate">Déchets - Environnement</div>
+                <div id="title1" class="animate" >La collecte en apport volontaire</div>
+            </div>
+        </section>
 
+        <section class="second-actu">
+            <img class="animate" src="assets/images/actu2-Rentree.jpg">
+            <img class="animate third-actu" src="assets/images/actu3-appel.png">
+            <div class="text-second-actu">
+                <div id="category2" class="animate">Evènement</div>
+                <div id="title2" class="animate" >Bonne rentrée 2023/2024</div>
+            </div>
 
-            slides.forEach((slide) => {
-                slide.classList.remove("active");
-            });
+            <div class="text-third-actu">
+                <div id="category3" class="animate">Transport</div>
+                <div id="title3" class="animate" >Mise en place de rotations Maritimes entre les ports de Terre de Haut et Terre de Bas</div>
+            </div>
+        </section>
+    </div>
 
-            contents.forEach((content) => {
-                content.classList.remove("active");
-            });
+    <div class="au-quotidien">
 
-            btns[manual].classList.add("active");
-            slides[manual].classList.add("active");
-            contents[manual].classList.add("active");
-
-        }
-
-            btns.forEach((btn, i) => {
-                btn.addEventListener("click", () => {
-                    sliderNav(i)
-                });
-            });
-
-    </script>
-
-    <div class="conteneur-body">
-        <div class="actu-background">
-            <div class="title-actu">Les actualités du moment</div>
-            <section class="first-actu">
-                <img class="animate" src="assets/images/Actu1-Déchets.png">
-                <div class="text-first-actu">
-                    <div id="category1" class="animate">Déchets - Environnement</div>
-                    <div id="title1" class="animate" >La collecte en apport volontaire</div>
-                </div>
-            </section>
-
-            <section class="second-actu">
-                <img class="animate" src="assets/images/actu2-Rentree.jpg">
-                <img class="animate third-actu" src="assets/images/actu3-appel.png">
-                <div class="text-second-actu">
-                    <div id="category2" class="animate">Evènement</div>
-                    <div id="title2" class="animate" >Bonne rentrée 2023/2024</div>
-                </div>
-
-                <div class="text-third-actu">
-                    <div id="category3" class="animate">Transport</div>
-                    <div id="title3" class="animate" >Mise en place de rotations Maritimes entre les ports de Terre de Haut et Terre de Bas</div>
-                </div>
-            </section>
-        </div>
-
-        <div class="au-quotidien">
-
-        </div>
+    </div>
     </div>
 
 
@@ -179,7 +148,7 @@
                 </div>
             </div>
         </div>
-    
+
         <div class="partner-section">
             <div class="container">
                 <div class="copyright-text">
@@ -195,8 +164,10 @@
                 <div class="partner-image"><img src="assets/images/genevois.png" alt="genevois"></div>
             </div>
         </div>
-    
+
     </footer>
+
+
 
 </body>
 

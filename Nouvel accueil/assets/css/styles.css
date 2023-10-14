@@ -237,7 +237,7 @@ img {
 
 /*=============== HOME ===============*/
 
-.home{
+.slider{
   position: relative;
 }
 
@@ -250,7 +250,7 @@ img {
   object-fit: cover;
   object-position: center;
 }
-.home .video-slide {
+.slider .video-slide {
   position: absolute;
   width: 100%;
   max-height: 100%; /* Ajustez la hauteur selon vos besoins */
@@ -710,7 +710,7 @@ img {
 /* For medium devices */
 
 @media screen and (min-width: 576px){
-  .home section,
+  .slider section,
   .home__container,
   .about__container,
   .explore__content,

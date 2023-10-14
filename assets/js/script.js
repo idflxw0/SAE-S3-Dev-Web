@@ -1,6 +1,6 @@
 const btns = document.querySelectorAll(".nav-btn");
 const slides = document.querySelectorAll(".video-slide");
-const contents = document.querySelectorAll(".content");
+const contents = document.querySelectorAll(".text-slider");
 var sliderNav = function(manual) {
     btns.forEach((btn) => {
         btn.classList.remove("active");
@@ -17,7 +17,6 @@ var sliderNav = function(manual) {
 
     btns[manual].classList.add("active");
     slides[manual].classList.add("active");
-    contents[manual].classList.add("active");
 
 }
 
@@ -29,12 +28,20 @@ btns.forEach((btn, i) => {
 
 //Pour que la navbar stick sur le haut de l'écran quand on scrolle
 document.addEventListener("DOMContentLoaded", function () {
-    const header = document.querySelector("header");
+    const header = document.querySelector("nav");
 
     window.addEventListener("scroll", function () {
         header.classList.toggle("sticky", window.scrollY > 60);
     });
 });
+
+//pour le layout en écran de moins de 1050px
+const menu = document.querySelector(".btn-responsive-menu")
+const navLinks = document.querySelector(".left-elements")
+
+menu.addEventListener('click',function(){
+    navLinks.classList.toggle('responsive-menu')
+})
 
 
 let sectionS = document.querySelectorAll('section');
@@ -45,7 +52,7 @@ window.onscroll = () => {
         let offset = sec.offsetTop - 185;
         let height = sec.offsetHeight;
 
-        if(top + 500 >= offset && top  < offset + height + 300)
+        if(top + 200 >= offset && top  < offset + height + 600)
             sec.classList.add('show-animate');
         else
             sec.classList.remove('show-animate');
