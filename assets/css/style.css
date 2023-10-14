@@ -8,9 +8,10 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(#1B8CC1 60%,transparent);
     /*color: #fff;*/
-    z-index: 1200;
+    background-color: white;
+    /*color: #fff;*/
+    z-index: 1000;
     transition: all .50s ease;
 }
 
@@ -92,6 +93,11 @@ header.sticky {
 
 /*ZONE CARROUSSEL VIDEO*/
 
+section {
+    padding:  10px 100px 400px;
+    position : relative;
+    margin-top: 75px;
+}
 
 
 .home{
