@@ -422,7 +422,7 @@ textarea.input{
     color: #fff;
 }
 
-.site-footer .col-md-3 {
+.site-footer .colonne {
     margin-bottom: 20px;
 }
 
@@ -448,7 +448,7 @@ textarea.input{
     position: relative;
 }
 
-.col-md-3 {
+.colonne {
     background-color: #2b2f32;
     color: #fff;
     padding: 20px;
@@ -493,7 +493,7 @@ textarea.input{
 }
 
 
-.col-md-3 h4 {
+.colonne h4 {
     margin-left: 30px;
 }
 
@@ -568,7 +568,7 @@ textarea.input{
 }
 
 @media (max-width: 768px) {
-    .site-footer .col-md-3 {
+    .site-footer .colonne {
         width: 50%;
     }
 }

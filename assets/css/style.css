@@ -17,7 +17,7 @@ header{
     top : 0;
     left:0;
     width:100%;
-    height:10vh;
+    height:12vh;
     background: linear-gradient(#1B8CC1 70%,transparent);
     display:flex;
     justify-content: space-between;
@@ -162,11 +162,17 @@ header .sticky {
         left:40px;
         width:6rem;
     }
-    .navbar-buttons {
+    .navbar-buttons  {
         display: block;
         position:absolute;
         top:20px;
         right:100px;
+
+    }
+
+    .navbar-buttons button {
+        font-size: 3rem;
+        margin: 0 15px;
     }
     .btn-responsive-menu {
         display : block;
@@ -180,7 +186,7 @@ header .sticky {
 
 .slider{
     position : relative;
-    top : 65px;
+    top : 60px;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -192,7 +198,7 @@ header .sticky {
     z-index: 000;
 
     width: 100%;
-    height: 85%;
+    height: 90%;
     object-fit: cover;
 }
 
@@ -554,34 +560,34 @@ header .sticky {
 
     /*ZONE FOOTER*/
     .site-footer {
-        position: absolute;
         width: 100%;
         background-color: #2b2f32;
         color: #fff;
-        padding: 20px 0;
-    ;
+        padding:0;
+        display:flex;
+        flex-direction: column;
+
     }
 
-    .site-footer .col-md-3 {
-        margin-bottom: 20px;
+    .text-section{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
+
+
+
 
     .site-footer h4 {
-        font-size: 18px;
-        margin-bottom: 20px;
+        font-size: 1.8rem;
         font-weight: bold;
     }
 
-    .site-footer .container{
-        margin-left: 15%;
+.site-footer p {
+    font-size: 1.5rem;
+}
 
-    }
 
-    .site-footer .container .row{
-        background-color: #2b2f32;
-        display: flex;
-        justify-content: space-between;
-    }
 
     .site-footer a {
         color: inherit;
@@ -590,13 +596,32 @@ header .sticky {
 
 
 
-    .col-md-3 {
+    .colonne {
         background-color: #2b2f32;
         color: #fff;
-        padding: 20px;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding:15px 0;
+    }
+
+    .contact-info{
+        text-align: center;
+        font-size:2rem;
+    }
+
+    .autres{
+        text-align: center;
     }
 
     /* FORMULAIRE NEWSLETTER */
+
+    .newsletter-form{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .newsletter-form input[type="email"] {
         width: 100%;
         padding: 10px;
@@ -605,12 +630,20 @@ header .sticky {
         border-radius: 5px;
     }
 
+.newsletter-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 5px;
+}
+
     .newsletter-form button {
         background-color: transparent;
         color: #fff;
         padding: 10px 20px;
         border: 2px solid #fff;
-        border-radius: 5px;
+        border-radius: 8px;
         cursor: pointer;
     }
 
@@ -634,15 +667,8 @@ header .sticky {
     }
 
 
-    .col-md-3 h4 {
-        margin-left: 30px;
-    }
 
     .social-icons a {
-        color: #007bff;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
         text-decoration: none;
         color: inherit;
     }
@@ -650,20 +676,16 @@ header .sticky {
     .social-icons img {
         width: 25px;
         height: auto;
-        margin-left: 110px;
     }
 
-    .les-quatre {
-        margin: 30px;
-    }
+
     /************FOOTER AVEC LES PARTENARIATS ************/
 
     .partner-section {
         background-color: #fff;
-        color: #7e7e7e;
+        color: black;
         padding: 10px 0;
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
 
@@ -674,14 +696,16 @@ header .sticky {
         flex-wrap: wrap;
         justify-content: flex-end;
         align-items: center;
-        margin-top: -25px;
     }
 
     .partner-image {
-        width: 10.66%;
-        padding: 10px;
+        width: 11%;
+        padding: 0 10px;
         box-sizing: border-box;
         text-align: center;
+    }
+     #ademe {
+        width: 7%;
     }
 
     .partner-image img {
@@ -691,33 +715,125 @@ header .sticky {
 
 
     .copyright-text {
-        margin-top: 10px;
         width: 100%;
-        font-size: 14px;
+        font-size: 1rem;
         text-align: left;
     }
 
 
     /************FOOTER AVEC LES PARTENARIATS ************/
-    @media (max-width: 1040px) {
-        header {
-            padding: 12px 20px;
+    @media (max-width: 1110px) {
+        .site-footer{
+            margin-left: 0;
+            padding: 0 20px;
+
         }
-        section{
-            padding: 100px 20px;
+
+        .text-section{
+            flex-direction: column;
+            justify-content: space-evenly;
         }
+
+        .newsletter-form{
+            width:50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .colonne {
+            align-items: center;
+        }
+
+        .contact-info{
+            font-size:2rem;
+        }
+
+        .site-footer h4 {
+            font-size: 3rem;
+            font-weight: bold;
+            width:100%;
+            text-align: center;
+        }
+
+        .site-footer p {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+
+        .autres{
+            text-align: center;
+            padding-bottom: 50px;
+
+        }
+        .social-icons {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .social-icons li {
+            margin: 0 30px;
+        }
+
+
+        .social-icons img {
+            width: 60px;
+            height: auto;
+        }
+
+        .newsletter-form{
+            width:100%;
+        }
+        .newsletter-form input[type="email"] {
+            width: 80%;
+            font-size: 3rem;
+        }
+
+        .newsletter-form input[type="text"] {
+            width: 80%;
+            font-size: 3rem;
+        }
+
+        .newsletter-form button {
+            font-size: 2.5rem;
+            padding: 15px 25px;
+        }
+
+        .partner-section {
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+        }
+        .partner-images{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+        }
+
+        .partner-image {
+            width: 35%;
+            box-sizing: border-box;
+
+        }
+        #ademe {
+            width: 25%;
+        }
+
+        .copyright-text {
+            width: 100%;
+            font-size: 3rem;
+            text-align: center;
+        }
+
+
     }
 
-    @media (max-width: 768px) {
-        .site-footer .col-md-3 {
-            width: 50%;
-        }
-    }
 
-    /* Default styles for navigation bar */
-    /* ... (previous styles) ... */
 
-    /* Media query for screens with a maximum width of 768px */
+
+
+    /* Media query for screens with a maximum width of 768px
     @media (max-width: 768px) {
         header {
             padding: 12px 20px;
@@ -759,12 +875,12 @@ header .sticky {
             margin-left: 0;
         }
 
-        /* Add a mobile navigation icon */
+        /* Add a mobile navigation icon
         .navbar-mobile-icon {
             display: block;
             cursor: pointer;
         }
-    }
+    }*/
 
 
 
