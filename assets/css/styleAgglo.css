@@ -1,0 +1,331 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    max-height: 100vh;
+
+}
+body{
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    min-height: 100vh;
+    /*background: #fff;*/
+
+}
+
+/*--------------HOME--------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.home{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #094b65, transparent);
+    z-index: 10;
+}
+
+.home img{
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.home #text{
+    position: absolute;
+    font-size: 10vw;
+    color: #094b65;
+    text-align: center;
+    line-height: 0.5em;
+    font-family: 'Rancho', cursive;
+    transform: translateY(-50%);
+}
+
+.home #text span{
+    font-size: 0.20em;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
+
+#btn{
+    padding: 8px 30px;
+    display: inline-block;
+    text-decoration: none;
+    background: #fff;
+    color: #094b65;
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border-radius: 40px;
+    transform: translateY(100px);
+}
+
+#btn .animate {
+    visibility: hidden;
+}
+
+.sea{
+    position: relative;
+    padding: 100px;
+    background: #094b65;
+}
+
+.sea h2{
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.sea p{
+    font-size: 1em;
+    color: #fff;
+}
+/*-------------- END HOME--------------*/
+
+.card-fill {
+    display: flex;
+    height: 100vh;
+    border: 1px solid #ddd;  /* Light grey border */
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);  /* Subtle shadow for a lifted effect */
+    /*border-radius: 10px;*/
+}
+
+.left-text {
+    flex: 1;
+    display: flex;
+    z-index: 2;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(160deg, #f5f5f5, #e0e0e0); /* Soft grey gradient background */
+    color: #333;
+    box-shadow: 10px 0px 15px rgba(0,0,0,0.1); /* Shadow to add some depth */
+}
+
+.h3-title-left {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    /*text-shadow: 2px 2px 4px rgba(0,0,0,0.6); !* Text shadow for better readability *!*/
+}
+
+.p-text-left {
+    font-size: 18px;
+    line-height: 1.8;
+    /*background-color: rgba(255, 255, 255, 0.2); !* Slightly white transparent bg *!*/
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1); /* Text box shadow */
+}
+
+.right-image {
+    flex: 1;
+}
+
+.right-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+
+}
+.right-image img:hover {
+     transform: scale(1.1);
+}
+.card-fill .right-image {
+    overflow: hidden; /* Add this to hide any overflow */
+}
+
+
+/* Additional CSS for animations */
+.left-text, .right-image {
+    opacity: 0;
+    transform: translateY(30px);
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.left-text {
+    animation-name: slideInText;
+}
+
+.right-image {
+    animation-name: slideInImage;
+}
+
+@keyframes slideInText {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInImage {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.left-text.animate, .right-image.animate {
+    animation-name: slideInText; /* or slideInImage respectively */
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+
+/**----------------------MAP------------------------*/
+.map {
+    flex: 199;
+    background-color: #9ec7f3;
+    display: flex;
+    justify-content: space-between; /* Space out children */
+    overflow: hidden;
+
+}
+.map-image {
+    width: 50%; /* or whatever percentage or pixel value you desire */
+    height: 100vh; /* or another height that fits your design */
+    object-fit: contain;
+    position: relative;
+
+
+}
+.map-image img {
+    max-height: 100%;
+    transform: translateY(-130px);
+    width: auto;
+    height: auto;
+}
+
+.territory {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.territory {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    transform: translateY(200px);
+    width: 35%; /* Adjust this based on your design needs */
+    height: 45%;
+}
+
+.territory a {
+    display: inline-block;
+    margin: 5px 15px;
+    padding: 10px 20px; /* Adjusted padding for a more button-like appearance */
+    background-color: #2C3E50; /* Dark blue color */
+    border: none; /* Remove border */
+    border-radius: 25px; /* Rounded edges */
+    text-decoration: none;
+    color: #fff; /* White text color */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Added transform transition */
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    cursor: pointer; /* Cursor appearance when hovering */
+}
+
+.territory a:hover {
+    background-color: #34495E; /* Slightly darker blue when hovered */
+    color: #EAEDED; /* Slightly dimmed white color */
+    transform: translateY(-3px); /* Button moves up a bit when hovered */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Bigger shadow on hover */
+}
+
+.territory a:active {
+    transform: translateY(1px); /* Button moves down a bit when clicked */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Smaller shadow when clicked */
+}
+
+
+@media only screen and (max-width: 600px) {
+    .h3-title-left {
+        font-size: 4vw;
+    }
+    .p-text-left {
+        font-size: 3vw;
+    }
+}
+/*---------------------------SVG MAP STYLES---------------------------------*/
+.map-image path {
+    fill: #b9b9b9; /* default color */
+}
+.map-image path:hover {
+    fill: #ff001e; /*color on hover*/
+}
+
+
+
+
+/*--------------------ANIMATION *------------------- */
+
+.card-fill {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.card-fill.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-fill .animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.card-fill.show-animate .animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.button-explore .animate {
+    display: none;
+}
+
+
+
+
+
