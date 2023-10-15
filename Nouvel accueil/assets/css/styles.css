@@ -5,16 +5,13 @@
 :root {
   --header-height: 3.5rem;
 
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
+  /*========== Couleurs ==========*/
   --title-color: hsl(0, 0%, 100%);
   --text-color: hsl(0, 0%, 70%);
   --text-color-light: hsl(0, 0%, 60%);
   --body-color: hsl(0, 0%, 0%);
   --container-color: hsl(0, 0%, 8%);
 
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Poppins", sans-serif;
   --second-font: "Montserrat", sans-serif;
   --biggest-font-size: 2.75rem;
@@ -25,18 +22,16 @@
   --small-font-size: .813rem;
   --smaller-font-size: .75rem;
 
-  /*========== Font weight ==========*/
   --font-regular: 400;
   --font-medium: 500;
   --font-semi-bold: 600;
 
-  /*========== z index ==========*/
   --z-tooltip: 10;
   --z-fixed: 100;
 }
 
 
-/*========== Responsive typography ==========*/
+/*========== Responsive écriture ==========*/
 @media screen and (min-width: 1152px) {
   :root {
     --biggest-font-size: 5.5rem;
@@ -97,7 +92,7 @@ img {
   height: auto;
 }
 
-/*=============== REUSABLE CSS CLASSES ===============*/
+/*=============== CSS classes ===============*/
 .container {
   max-width: 1120px;
   margin-inline: 1.5rem;
@@ -119,7 +114,7 @@ img {
 }
 
 .main {
-  overflow: hidden; /* For animation ScrollReveal */
+  overflow: hidden;
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -161,7 +156,7 @@ img {
   color: var(--title-color);
   cursor: pointer;
 }
-/* Navigation for mobile devices */
+/* Responsive pour les petits mobiles */
 @media screen and (max-width: 1023px){
   .nav__menu{
     position: fixed;
@@ -177,7 +172,7 @@ img {
 }
 
 .nav__list{
-  text-align: center;
+  text-align: right;
   display: flex;
   flex-direction: column;
   row-gap: 2.5rem;
@@ -210,13 +205,12 @@ img {
   top: 1rem;
   right: 1.5rem;
 }
-/* Show menu */
 
 .show-menu{
   top: 0;
 }
 
-/* Add blur to header */
+/* Effet flou */
 
 .blur-header::after{
   content: '';
@@ -231,9 +225,7 @@ img {
 }
 
 /* Active link */
-.active-link::after{
-  width: 70%;
-}
+
 
 /*=============== HOME ===============*/
 
@@ -253,8 +245,8 @@ img {
 .home .video-slide {
   position: absolute;
   width: 100%;
-  max-height: 100%; /* Ajustez la hauteur selon vos besoins */
-  object-fit: cover; /* Ajustez le comportement de l'ajustement */
+  max-height: 100%;
+  object-fit: cover;
 }
 
 /* Styles pour le carousel de vidéos */
