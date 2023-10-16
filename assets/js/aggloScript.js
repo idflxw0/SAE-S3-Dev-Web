@@ -17,7 +17,7 @@ window.addEventListener('scroll', () => {
     rocks.style.top = value * -0.12 + 'px';
     forest.style.top = value * 0.25 + 'px';
     header.style.top = value * 0.5 + 'px'
-})
+});
 
 
 const cardElements = document.querySelectorAll('.card-fill');
@@ -47,7 +47,7 @@ button.forEach((hide_button)=> {
 });
 
 
-//SI SVG METHOD NE MARCHE PAS :
+//replacement pour la map SVG:
 /*
 const mapImage = document.getElementById("mapImage");
 
@@ -80,3 +80,20 @@ for (const regionName in regions) {
     replaceImage(document.getElementById(regionName), regions[regionName]);
 }
  */
+document.querySelectorAll('.territory a').forEach(linkElement => {
+    linkElement.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevents the page from scrolling to the anchor link
+
+        // Hide all other active cards
+        document.querySelectorAll('.dropdown-card.active').forEach(activeCard => {
+            activeCard.classList.remove('active');
+        });
+
+        const cardId = 'card-' + this.getAttribute('href').substring(1); // Constructs the card's ID
+        const cardElement = document.querySelector(`#${cardId}`);
+
+        // Toggle the display of the dropdown card
+        cardElement.classList.toggle('active');
+    });
+});
+
