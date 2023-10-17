@@ -57,7 +57,7 @@ const replaceImage = (region, imageSource) => {
     });
 
     region.addEventListener("mouseout", () => {
-        mapImage.src = "assets/images/Map/Baillif.png"; // Replace with the path to the default image
+        mapImage.src = "assets/images/Map/Baillif.png";
     });
 };
 
@@ -108,7 +108,7 @@ textElements.forEach((textElement) => {
 
         if (region) {
             // Change the fill color of the region when hovering over the text
-            region.style.fill = '#0a3622'; // Replace 'your-hover-color' with your desired hover color
+            region.style.fill = '#0a3622';
         }
     });
 
@@ -118,12 +118,11 @@ textElements.forEach((textElement) => {
 
         if (region) {
             // Restore the original fill color when the mouse leaves the text
-            region.style.fill = '#ff0000'; // Replace 'original-fill-color' with the original color
+            region.style.fill = '#ff0000';
         }
     });
 });
 
-//MAP to text :
 // Map to TEXT
 const mapRegions = document.querySelectorAll('.region-hover');
 mapRegions.forEach((mapRegion) => {
@@ -140,8 +139,7 @@ mapRegions.forEach((mapRegion) => {
         const regionId = mapRegion.getAttribute('xlink:title');
         const textElement = document.querySelector(`[id="${regionId}"]`);
         if (textElement) {
-            // Restore the original color when the mouse leaves the map region
-            textElement.style.color = '#fff'; // Replace 'original-text-color' with the original color
+            textElement.style.color = '#fff';
         }
     });
 });
