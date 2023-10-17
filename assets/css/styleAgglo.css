@@ -291,39 +291,6 @@ body{
 .map #map-svg #CA-du-Sud-Basse-Terre .region-hover:hover {
     fill: #0a3622;
 }
-.dropdown-card {
-    display: none; /* Hidden by default */
-    position: absolute; /* To position relative to the link */
-    top: 100%; /* Position below the link */
-    left: 0; /* Align with the left edge of the link */
-    width: 250px; /* Example width, adjust as needed */
-    background-color: #2C3E50; /* Dark blue color from the .territory a */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    overflow: hidden; /* Clip inner content */
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Transition for the slide down effect */
-    transform: translateY(-10px); /* Start slightly above for the animation */
-    opacity: 0; /* Start as transparent */
-}
-
-.dropdown-card.active {
-    display: block; /* Show the dropdown */
-    transform: translateY(0); /* Slide down */
-    opacity: 1; /* Become fully opaque */
-}
-
-.dropdown-card img {
-    width: 100%; /* Take full width of the card */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove default spacing */
-    border-radius: 10px 10px 0 0; /* Rounded corners on top */
-}
-
-
-.map #97105:hover ~ #card-Basse-Terre
-{
-    display: block;
-}
 
 /*--------------------ANIMATION *------------------- */
 
@@ -352,8 +319,3 @@ body{
 .button-explore .animate {
     display: none;
 }
-
-
-
-
-

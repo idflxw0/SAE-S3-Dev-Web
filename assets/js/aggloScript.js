@@ -80,7 +80,7 @@ for (const regionName in regions) {
     replaceImage(document.getElementById(regionName), regions[regionName]);
 }
  */
-document.querySelectorAll('.territory a').forEach(linkElement => {
+/*document.querySelectorAll('.territory a').forEach(linkElement => {
     linkElement.addEventListener('click', function(event) {
         event.preventDefault(); // Prevents the page from scrolling to the anchor link
 
@@ -95,5 +95,53 @@ document.querySelectorAll('.territory a').forEach(linkElement => {
         // Toggle the display of the dropdown card
         cardElement.classList.toggle('active');
     });
+}); */
+
+
+
+//TEXT to MAP
+const textElements = document.querySelectorAll('[data-region]');
+textElements.forEach((textElement) => {
+    textElement.addEventListener('mouseenter', () => {
+        const regionId = textElement.getAttribute('data-region');
+        const region = document.getElementById(regionId);
+
+        if (region) {
+            // Change the fill color of the region when hovering over the text
+            region.style.fill = '#0a3622'; // Replace 'your-hover-color' with your desired hover color
+        }
+    });
+
+    textElement.addEventListener('mouseleave', () => {
+        const regionId = textElement.getAttribute('data-region');
+        const region = document.getElementById(regionId);
+
+        if (region) {
+            // Restore the original fill color when the mouse leaves the text
+            region.style.fill = '#ff0000'; // Replace 'original-fill-color' with the original color
+        }
+    });
 });
 
+//MAP to text :
+// Map to TEXT
+const mapRegions = document.querySelectorAll('.region-hover');
+mapRegions.forEach((mapRegion) => {
+    mapRegion.addEventListener('mouseenter', () => {
+        const regionId = mapRegion.getAttribute('xlink:title');
+        const textElement = document.querySelector(`[id="${regionId}"]`);
+
+        if (textElement) {
+            textElement.style.color = '#ff0000';
+        }
+    });
+
+    mapRegion.addEventListener('mouseleave', () => {
+        const regionId = mapRegion.getAttribute('xlink:title');
+        const textElement = document.querySelector(`[id="${regionId}"]`);
+        if (textElement) {
+            // Restore the original color when the mouse leaves the map region
+            textElement.style.color = '#fff'; // Replace 'original-text-color' with the original color
+        }
+    });
+});
