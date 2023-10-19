@@ -118,9 +118,7 @@ img {
 }
 
 /*=============== HEADER & NAV ===============*/
-.ri-menu-fill{
-    background-color: grey;
-}
+
 .header{
     position: fixed;
     width: 100%;
