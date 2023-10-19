@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const btns = document.querySelectorAll(".nav-btn");
 const slides = document.querySelectorAll(".video-slide");
 const contents = document.querySelectorAll(".text-slider");
@@ -60,7 +59,6 @@ window.onscroll = () => {
 
     })
 }
-=======
 let currentIndex = 0;
 
 function showSlide(index) {
@@ -76,4 +74,3 @@ function showNextSlide() {
 
 // Change slide every 3 seconds
 setInterval(showNextSlide, 3000);
->>>>>>> PageAgglo
