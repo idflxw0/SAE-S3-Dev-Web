@@ -1,182 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8f0efef31f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/styleActu.css">
+
     <title>CASBT</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="./assets/cssbootstrap/bootstrap.min.css">
-    <script src="./assets/js/script.js" type="module"></script>
 </head>
-
 <body>
-<<<<<<< HEAD
-<header>
-    <div id="wrap-page">
-        <nav class="navbar">
-            <div class="container">
-                <a class="navbar-brand" href="./index.html">
-                    <img src="./assets/images/CASBT_logo.png" alt="Logo">
-                </a>
-                <ul class="navbar-menu">
-                    <li><a href="./index.html">Accueil</a></li>
-                    <li><a href="./Actualités.html">Actualités</a></li>
-                    <li><a href="./A propos.html">À propos</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle">Infos pratiques</a>
-=======
-<div id="wrap-page">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">
-                <img
-                        class="logo-casbt-icon"
-                        alt=""
-                        src="./assets/images/CASBT_logo.png"
-                />
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./index.html">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./Actualités.html">Actualités</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./A propos.html">À propos</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Infos pratiques
-                        </a>
->>>>>>> PageAgglo
-                        <ul class="dropdown-menu">
-                            <li><a href="./Nos démarches.html">Nos démarches</a></li>
-                            <li><a href="#">Notre agglomération</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <div class="navbar-buttons">
-                    <button class="btn btn-sm btn-outline-secondary">S’inscrire</button>
-                    <button class="btn btn-sm btn-outline-secondary">Connexion</button>
-                </div>
-            </div>
-        </nav>
-    </div>
+<!--==================== HEADER ====================-->
+<header class="header" id="header">
+    <nav class="nav container">
+        <div class="nav__logo">
+            <img src="assets/images/CASBT_logo.png" alt="Notre logo" class="logo-img">
+        </div>
 
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="index.html" class="nav__link active-link">Accueil</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="Actualités.html" class="nav__link">Actualités</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="" class="nav__link">Notre Agglomération</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="Contact.html" class="nav__link">Aide</a>
+                </li>
+
+                <div class="nav__buttons">
+                    <button class="nav__button">S'identifier</button>
+                    <button class="nav__button">Connexion</button>
+                </div>
+            </ul>
+
+            <div class="nav__close" id="nav-close">
+                <i class="ri-close-line"></i>
+            </div>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-fill"></i>
+        </div>
+    </nav>
 </header>
 
-<section class="home">
-    <video class="video-slide active" src="assets/videos/plage2.mp4" autoplay muted loop></video>
-    <video class="video-slide" src="assets/videos/plage1.mp4" autoplay muted loop></video>
-    <video class="video-slide" src="assets/videos/poissons.mp4"  autoplay muted loop></video>
-    <video class="video-slide" src="assets/videos/oiseau.mp4"  autoplay muted loop></video>
-    <video class="video-slide" src="assets/videos/tortue.mp4"  autoplay muted loop></video>
+<!--==================== MAIN ====================-->
+<main class="main">
+    <!--==================== HOME ====================-->
+    <section class="home section" id="home">
+        <video class="video-slide active" src="assets/videos/plage2.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="assets/videos/plage1.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="assets/videos/poissons.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="assets/videos/oiseau.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="assets/videos/tortue.mp4" autoplay muted loop></video>
 
-    <div class="content active">
-        <h1>La Communauté d'Agglomération<br><span>du Sud Basse-Terre</span></h1>
-        <p>Que vous soyez résident de longue date ou tout simplement curieux de connaître davantage notre région, nous sommes ravis de vous accueillir ici. Merci de votre visite et bonne découverte !</p>
-        <a href="#">Découvrez-nous</a>
-    </div>
+        <div class="carousel-buttons">
+            <button class="nav-btn active"></button>
+            <button class="nav-btn"></button>
+            <button class="nav-btn"></button>
+            <button class="nav-btn"></button>
+            <button class="nav-btn"></button>
+        </div>
 
-    <div class="slider-navigation">
-        <div class="nav-btn active"></div>
-        <div class="nav-btn"></div>
-        <div class="nav-btn"></div>
-        <div class="nav-btn"></div>
-        <div class="nav-btn"></div>
-    </div>
-</section>
-
-<script type="text/javascript">
-    const btns = document.querySelectorAll(".nav-btn");
-    const slides = document.querySelectorAll(".video-slide");
-    const contents = document.querySelectorAll(".content");
-    var sliderNav = function(manual) {
-        btns.forEach((btn) => {
-            btn.classList.remove("active");
-        });
+        <script type="text/javascript">
+            const btns = document.querySelectorAll(".nav-btn");
+            const slides = document.querySelectorAll(".video-slide");
+            const contents = document.querySelectorAll(".content");
+            var sliderNav = function(manual) {
+                btns.forEach((btn) => {
+                    btn.classList.remove("active");
+                });
 
 
-        slides.forEach((slide) => {
-            slide.classList.remove("active");
-        });
+                slides.forEach((slide) => {
+                    slide.classList.remove("active");
+                });
 
-        contents.forEach((content) => {
-            content.classList.remove("active");
-        });
+                contents.forEach((content) => {
+                    content.classList.remove("active");
+                });
 
-        btns[manual].classList.add("active");
-        slides[manual].classList.add("active");
-        contents[manual].classList.add("active");
+                btns[manual].classList.add("active");
+                slides[manual].classList.add("active");
+                contents[manual].classList.add("active");
 
-    }
+            }
 
-    btns.forEach((btn, i) => {
-        btn.addEventListener("click", () => {
-            sliderNav(i)
-        });
-    });
+            btns.forEach((btn, i) => {
+                btn.addEventListener("click", () => {
+                    sliderNav(i)
+                });
+            });
 
-</script>
+        </script>
 
 
-<footer class="site-footer">
-    <div class="container">
-        <div class="row">
-            <div class="colonne">
-                <h4>Contactez-nous</h4>
-                <p>Nos services sont à votre disposition du lundi au vendredi de 8h00 à 14h30.</p>
-                <div class="contact-info">
-                    <div class="address">
-                        <img src="assets/images/loc.png" alt="adresse">
-                        <p>Grand Sud Caraïbe 12 rue Bébian, 97100 Basse-Terre</p>
-                    </div>
-                    <div class="phone">
-                        <img src="assets/images/phone.png" alt="phone">
-                        <p>05 90 99 63 20</p>
-                    </div>
+        <div class="home__container container grid">
+            <div class="home__data">
+                <h3  class="home__subtitle">
+                    LA COMMUNAUTÉ D'AGGLOMÉRATION DU SUD BASSE-TERRE
+                </h3>
+
+                <h1 class="home__title">
+                </h1>
+
+                <p class="home__description">
+                    Que vous soyez résident de longue date ou tout simplement curieux de connaître davantage notre région, nous sommes ravis de vous accueillir ici. Merci de votre visite et bonne découverte !
+                </p>
+
+                <a href="#" class="button">
+                    Découvez-nous <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!--==================== ABOUT ====================-->
+    <section class="about section" id="about">
+        <div class="about__container container grid">
+            <div class="about__data">
+                <h2 class="section__title">
+                    En savoir plus<br>
+                    sur CABST
+                </h2>
+
+                <p class="about__description">
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                </p>
+
+                <a href="#" class="button">
+                    Visiter CASBT <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+
+            <div class="about__image">
+                <img src="assets/images/about-beach.jpg" alt="about image" class="about__img">
+                <div class="about__shadow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!--==================== POPULAR ====================-->
+    <section class="popular section" id="popular">
+        <h2 class="section__title">
+            Les actualités <br>
+            du moment
+        </h2>
+
+        <div class="popular__container container grid">
+            <article class="popular__card">
+                <div class="popular__image">
+                    <img src="assets/images/tri.jpeg" alt="popular image" class="popular__img">
+                    <div class="popular__shadow"></div>
                 </div>
-            </div>
-            <div class="colonne">
-                <h4>NewsLetter</h4>
-                <form class="newsletter-form" action="#" method="post">
-                    <input type="email" name="email" placeholder="Prénom" required>
-                </form>
-                <form class="newsletter-form" action="#" method="post">
-                    <input type="email" name="email" placeholder="Email" required>
-                    <button type="submit">SOUSCRIVEZ</button>
-                </form>
-            </div>
-            <div class="colonne">
-                <h4>Retrouvez-nous sur</h4>
-                <ul class="social-icons">
-                    <li><a href="https://www.facebook.com/?locale=fr_FR"><img src="assets/images/facebook.jpg"
-                                                                              alt="Facebook"></a></li>
-                    <li><a href="https://www.youtube.com/"><img src="assets/images/yt.png" alt="Youtube"> </a></li>
-                    <li><a href="https://twitter.com/?lang=fr"><img src="assets/images/x.png" alt="X"> </a></li>
-                    <li>
-                        <a href="https://www.linkedin.com/home?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=fr"><img
-                                src="assets/images/linked.jpg" alt="LinkedIn"></a></li>
-                    <li><a href="https://www.instagram.com/"><img src="assets/images/yt.png" alt="Instagram"></a></li>
-                </ul>
-            </div>
-            <div class="colonne">
-                <h4>Autres</h4>
-                <div class="les-quatre">
-                    <p><a href="#">Plan du site</a></p>
-                    <p><a href="#">Mentions légales</a></p>
-                    <p><a href="#">FAQs</a></p>
-                    <p><a href="#">Accessibilité</a></p>
+
+                <h2 class="popular__title">
+                    Utilisons les bornes !
+
+                </h2>
+
+                <div class="popular__location">
+                    <span>Une courte vidéo sur l’importance du tri sélectif.</span>
                 </div>
+            </article>
+
+            <article class="popular__card">
+                <div class="popular__image">
+                    <img src="assets/images/collecte.jpeg" alt="popular image" class="popular__img">
+                    <div class="popular__shadow"></div>
+                </div>
+
+                <h2 class="popular__title">
+                    Collecte en apport volontaire
+                </h2>
+
+                <div class="popular__location">
+                    <span>Calendrier de collecte semestriel pour 2023.</span>
+                </div>
+            </article>
+
+            <article class="popular__card">
+                <div class="popular__image">
+                    <img src="assets/images/montagne.jpeg" alt="popular image" class="popular__img">
+                    <div class="popular__shadow"></div>
+                </div>
+
+                <h2 class="popular__title">
+                    Bonne rentrée 2023-2024 !
+                </h2>
+
+                <div class="popular__location">
+                    <span>Thierry ABELLI, président de l’agglomération, vous souhaite une excellente rentrée !</span>
+                </div>
+            </article>
+
+            <article class="popular__card">
+                <div class="popular__image">
+                    <img src="assets/images/marin.webp" alt="popular image" class="popular__img">
+                    <div class="popular__shadow"></div>
+                </div>
+
+                <h2 class="popular__title">
+                    Nouveautés Transports
+                </h2>
+
+                <div class="popular__location">
+                    <span>Mise en place de rotations maritimes entre les ports de Terre de Haut et Terre de Bas.</span>
+                </div>
+            </article>
+
+            <article class="popular__card">
+                <div class="popular__image">
+                    <img src="assets/images/energie.png" alt="popular image" class="popular__img">
+                    <div class="popular__shadow"></div>
+                </div>
+
+                <h2 class="popular__title">
+                    Comment réduire sa consommation énergétique ?
+                </h2>
+
+                <div class="popular__location">
+                    <span>Le logement est le premier poste de consommation d’énergie sur notre territoire tandis que c’est le transport qui passe devant en terme d’émissons de gaz à effet de serre.</span>
+                </div>
+            </article>
+
+            <article class="popular__card">
+                <div class="popular__image">
+                    <img src="assets/images/politique.png" alt="popular image" class="popular__img">
+                    <div class="popular__shadow"></div>
+                </div>
+
+                <h2 class="popular__title">
+                    Que fait-on ?
+                </h2>
+
+                <div class="popular__location">
+                    <span>Nos projets, nos programmes, tout se trouve ici !</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!--==================== JOIN ====================-->
+    <section class="join section">
+        <div class="join__container container grid">
+            <div class="join__data">
+                <h2 class="section__title">
+                    Inscription <br>
+                    NewsLetter
+                </h2>
+
+                <p class="join__description">
+                    Ne loupez rien, restez informé de toute l'actualité de l'Agglomération !
+                </p>
+
+                <form action="" class="join__form">
+                    <input type="email" placeholder="Votre mail" class="join__input">
+
+                    <button class="join__button button">
+                        Souscrire <i class="ri-arrow-right-line"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="join__image">
+                <img src="assets/images/join-island.jpg" alt="join image" class="join__img">
+                <div class="join__shadow"></div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!--==================== FOOTER ====================-->
+<footer class="footer">
+    <div class="footer__container container grid">
+        <div class="footer__content grid">
+            <div>
+                <a href="#" class="footer__logo">CASBT</a>
+
+                <p class="footer__description">
+                    Rejoignez-nous et <br> découvrez les merveilles <br>
+                    qu'abritent notre commune !
+                </p>
+            </div>
+
+            <div class="footer__data grid">
+                <div>
+                    <h3 class="footer__title">Contact</h3>
+
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#" class="footer__link">05 90 99 63 20</a>
+                        </li>
+
+                        <li>
+                            <a href="http://gmail.com" class="footer__link">Gscaraibes@societe.com</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer__link">Grand Sud Caraïbe<br>12 rue Bébian 97100 Basse-Terre</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer__title">Vie quotidienne</h3>
+
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#" class="footer__link">Transport</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer__link">Environnement</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer__link">Politique de la ville</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer__title">Tourisme</h3>
+
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#" class="footer__link">Culture</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer__link">Sports et loisirs</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer__link">Infos tourisme</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer__group">
+            <div class="footer__social">
+                <a href="http://www.facebook.com/" target="_blank" class="footer__social-link">
+                    <i class="ri-facebook-line"></i>
+                </a>
+
+                <a href="http://www.instagram.com/" target="_blank" class="footer__social-link">
+                    <i class="ri-instagram-line"></i>
+                </a>
+
+                <a href="http://www.twitter.com/" target="_blank" class="footer__social-link">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="http://www.youtube.com/" target="_blank" class="footer__social-link">
+                    <i class="ri-youtube-line"></i>
+                </a>
+
+                <a href="http://www.youtube.com/" target="_blank" class="footer__social-link">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
             </div>
         </div>
     </div>
-
     <div class="partner-section">
         <div class="container">
             <div class="copyright-text">
@@ -192,9 +391,17 @@
             <div class="partner-image"><img src="assets/images/genevois.png" alt="genevois"></div>
         </div>
     </div>
-
 </footer>
 
-</body>
+<!--========== SCROLL UP ==========-->
+<a href="#" class="scrollup" id="scroll-up">
+    <i class="ri-arrow-up-line"></i>
+</a>
 
+<!--=============== SCROLLREVEAL ===============-->
+<script src="assets/js/ScrollReveal.js"></script>
+
+<!--=============== MAIN JS ===============-->
+<script src="assets/js/appActu.js"></script>
+</body>
 </html>

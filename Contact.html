@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/8f0efef31f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/css/styleContact.css">
+
+  <title>CASBT</title>
+</head>
+<body>
+<!--==================== HEADER ====================-->
+<header class="header" id="header">
+  <nav class="nav container">
+    <div class="nav__logo">
+      <img src="assets/images/CASBT_logo.png" alt="Notre logo" class="logo-img">
+    </div>
+
+
+    <div class="nav__menu" id="nav-menu">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="index.html" class="nav__link active-link">Accueil</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="Actualités.html" class="nav__link">Actualités</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="" class="nav__link">Notre Agglomération</a>
+        </li>
+
+        <li class="nav__item">
+          <a href="Contact.html" class="nav__link">Aide</a>
+        </li>
+
+        <div class="nav__buttons">
+          <button class="nav__button">S'identifier</button>
+          <button class="nav__button">Connexion</button>
+        </div>
+      </ul>
+
+      <div class="nav__close" id="nav-close">
+        <i class="ri-close-line"></i>
+      </div>
+    </div>
+
+    <div class="nav__toggle" id="nav-toggle">
+      <i class="ri-menu-fill"></i>
+    </div>
+  </nav>
+</header>
+
+<!--==================== MAIN ====================-->
+<main class="main">
+  <!--==================== HOME ====================-->
+  <section class="home section" id="home">
+    <video class="video-slide active" src="assets/videos/plage2.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="assets/videos/plage1.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="assets/videos/poissons.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="assets/videos/oiseau.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="assets/videos/tortue.mp4" autoplay muted loop></video>
+
+    <div class="carousel-buttons">
+      <button class="nav-btn active"></button>
+      <button class="nav-btn"></button>
+      <button class="nav-btn"></button>
+      <button class="nav-btn"></button>
+      <button class="nav-btn"></button>
+    </div>
+
+    <script type="text/javascript">
+      const btns = document.querySelectorAll(".nav-btn");
+      const slides = document.querySelectorAll(".video-slide");
+      const contents = document.querySelectorAll(".content");
+      var sliderNav = function(manual) {
+        btns.forEach((btn) => {
+          btn.classList.remove("active");
+        });
+
+
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        });
+
+        contents.forEach((content) => {
+          content.classList.remove("active");
+        });
+
+        btns[manual].classList.add("active");
+        slides[manual].classList.add("active");
+        contents[manual].classList.add("active");
+
+      }
+
+      btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          sliderNav(i)
+        });
+      });
+
+    </script>
+
+
+    <div class="home__container container grid">
+      <div class="home__data">
+        <h3  class="home__subtitle">
+          LA COMMUNAUTÉ D'AGGLOMÉRATION DU SUD BASSE-TERRE
+        </h3>
+
+        <h1 class="home__title">
+        </h1>
+
+        <p class="home__description">
+          Que vous soyez résident de longue date ou tout simplement curieux de connaître davantage notre région, nous sommes ravis de vous accueillir ici. Merci de votre visite et bonne découverte !
+        </p>
+
+        <a href="#" class="button">
+          Découvez-nous <i class="ri-arrow-right-line"></i>
+        </a>
+      </div>
+
+
+    </div>
+  </section>
+</main>
+
+<section class="form__contact">
+
+  <div class="container">
+    <img src="img/shape.png" class="square" alt="" />
+    <div class="form">
+      <div class="contact-info">
+        <h3 class="title">Besoin d'aide ?</h3>
+        <p class="text">
+          Vous recherchez une information ou un interlocuteur à l’Agglo ?
+          Contactez nos services qui sont à votre disposition au 0590 99 63 20 du lundi au vendredi, de 8h00 à 14h30
+        </p>
+
+        <div class="info">
+          <div class="information">
+            <img src="assets/images/location.png" class="icon" alt="" />
+            <p>Grand Sud Caraïbe 12 rue Bébian 97100 Basse-Terre</p>
+          </div>
+          <div class="information">
+            <img src="assets/images/email.png" class="icon" alt="" />
+            <p>Gscaraibes@societe.com</p>
+          </div>
+          <div class="information">
+            <img src="assets/images/phone2.png" class="icon" alt="" />
+            <p>05 90 99 63 20</p>
+          </div>
+        </div>
+
+        <div class="social-media">
+          <p>Suivez-nous sur</p>
+          <div class="social-icons">
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a>
+              <i class="ri-youtube-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <span class="circle one"></span>
+        <span class="circle two"></span>
+
+        <form action="index.html" autocomplete="off">
+          <h3 class="title">Contactez nous </h3>
+          <div class="input-container">
+            <input type="text" name="name" class="input" />
+            <label for=>Nom</label>
+            <span>Nom</span>
+          </div>
+          <div class="input-container">
+            <input type="email" name="email" class="input" />
+            <label for=>Email</label>
+            <span>Email</span>
+          </div>
+          <div class="input-container">
+            <input type="tel" name="phone" class="input" />
+            <label for=>Téléphone</label>
+            <span>Téléphone</span>
+          </div>
+          <div class="input-container textarea">
+            <textarea name="message" class="input"></textarea>
+            <label for=>Détails de votre requête</label>
+            <span>Détails de votre requête</span>
+          </div>
+          <input type="submit" value="Envoyez" class="btn" />
+        </form>
+      </div>
+    </div>
+  </div>
+
+</section>
+<!--==================== FOOTER ====================-->
+<footer class="footer">
+  <div class="footer__container container grid">
+    <div class="footer__content grid">
+      <div>
+        <a href="#" class="footer__logo">CASBT</a>
+
+        <p class="footer__description">
+          Rejoignez-nous et <br> découvrez les merveilles <br>
+          qu'abritent notre commune !
+        </p>
+      </div>
+
+      <div class="footer__data grid">
+        <div>
+          <h3 class="footer__title">Contact</h3>
+
+          <ul class="footer__links">
+            <li>
+              <a href="#" class="footer__link">05 90 99 63 20</a>
+            </li>
+
+            <li>
+              <a href="http://gmail.com" class="footer__link">Gscaraibes@societe.com</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer__link">Grand Sud Caraïbe<br>12 rue Bébian 97100 Basse-Terre</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__title">Vie quotidienne</h3>
+
+          <ul class="footer__links">
+            <li>
+              <a href="#" class="footer__link">Transport</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer__link">Environnement</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer__link">Politique de la ville</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__title">Tourisme</h3>
+
+          <ul class="footer__links">
+            <li>
+              <a href="#" class="footer__link">Culture</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer__link">Sports et loisirs</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer__link">Infos tourisme</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer__group">
+      <div class="footer__social">
+        <a href="http://www.facebook.com/" target="_blank" class="footer__social-link">
+          <i class="ri-facebook-line"></i>
+        </a>
+
+        <a href="http://www.instagram.com/" target="_blank" class="footer__social-link">
+          <i class="ri-instagram-line"></i>
+        </a>
+
+        <a href="http://www.twitter.com/" target="_blank" class="footer__social-link">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+        <a href="http://www.youtube.com/" target="_blank" class="footer__social-link">
+          <i class="ri-youtube-line"></i>
+        </a>
+
+        <a href="http://www.youtube.com/" target="_blank" class="footer__social-link">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="partner-section">
+    <div class="container">
+      <div class="copyright-text">
+        ©2023 Tous Droits Réservés
+      </div>
+    </div>
+    <div class="container partner-images">
+      <div class="partner-image"><img src="assets/images/eur.png" alt="eur"></div>
+      <div class="partner-image"><img src="assets/images/auvergne.png" alt="auvergne"></div>
+      <div class="partner-image"><img src="assets/images/ain.png" alt="ain"></div>
+      <div class="partner-image"><img src="assets/images/geneve.png" alt="geneve"></div>
+      <div class="partner-image"><img src="assets/images/cern.png" alt="cern"></div>
+      <div class="partner-image"><img src="assets/images/genevois.png" alt="genevois"></div>
+    </div>
+  </div>
+</footer>
+
+
+<!--========== SCROLL UP ==========-->
+<a href="#" class="scrollup" id="scroll-up">
+  <i class="ri-arrow-up-line"></i>
+</a>
+
+<!--=============== SCROLLREVEAL ===============-->
+<script src="assets/js/ScrollReveal.js"></script>
+
+<!--=============== MAIN JS ===============-->
+<script src="assets/js/appActu.js"></script>
+<script src="assets/js/appContact.js"></script>
+</body>
+</html>

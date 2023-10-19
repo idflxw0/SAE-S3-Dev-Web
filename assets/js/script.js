@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> dee2c745140ae803f6f031328c27ac199c839869
 const btns = document.querySelectorAll(".nav-btn");
 const slides = document.querySelectorAll(".video-slide");
 const contents = document.querySelectorAll(".text-slider");
@@ -60,7 +63,10 @@ window.onscroll = () => {
 
     })
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> dee2c745140ae803f6f031328c27ac199c839869
 let currentIndex = 0;
 
 function showSlide(index) {
@@ -75,4 +81,8 @@ function showNextSlide() {
 }
 
 // Change slide every 3 seconds
+<<<<<<< HEAD
 setInterval(showNextSlide, 3000);
+=======
+setInterval(showNextSlide, 3000);
+>>>>>>> dee2c745140ae803f6f031328c27ac199c839869
