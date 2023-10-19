@@ -121,10 +121,11 @@ img {
 .header{
     position: fixed;
     width: 100%;
-    background-color: transparent;
+    background: linear-gradient(#1B8CC1 70%,transparent);
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
+    height: 100px;
 }
 
 .nav{
@@ -158,10 +159,10 @@ img {
 
 .nav__button{
     background-color: transparent;
-    border: 2px solid darkblue;
+    border: 2px solid #ffffff;
     border-radius: 5px;
     padding: 2px;
-    color: darkblue;
+    color: #ffffff;
 }
 
 .nav__button:hover{
@@ -198,7 +199,7 @@ img {
 
 .nav__link{
     position: relative;
-    color: dodgerblue;
+    color: white;
     font-family: var(--second-font);
     font-weight: var(--font-medium);
 }
@@ -229,8 +230,16 @@ img {
     top: 0;
 }
 
-/* Effet flou */
+.blur-header {
+    position: fixed;
+    width: 100%;
+    background: transparent;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+}
 
+/* Effet flou */
 .blur-header::after{
     content: '';
     position: absolute;
@@ -242,6 +251,7 @@ img {
     left: 0;
     z-index: -1;
 }
+
 
 /* Active link */
 
