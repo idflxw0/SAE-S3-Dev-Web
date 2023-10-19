@@ -1,6 +1,4 @@
 body, html {
-    margin: 0;
-    padding: 0;
     height: 100%;
     font-family: 'Roboto', sans-serif;
     max-height: 100vh;
@@ -8,10 +6,7 @@ body, html {
 }
 body{
     overflow-x: hidden;
-    scroll-snap-type: y mandatory;
     min-height: 100vh;
-    /*background: #fff;*/
-
 }
 
 /*--------------HOME--------------*/
@@ -252,6 +247,7 @@ body{
 
 .territory a {
     display: inline-block;
+    font-size: 1.2rem;
     margin: 5px 15px;
     padding: 10px 20px; /* Adjusted padding for a more button-like appearance */
     background-color: #2C3E50; /* Dark blue color */
@@ -288,9 +284,9 @@ body{
     fill: #0a53be;
 }
 
-.map #map-svg #CA-du-Sud-Basse-Terre .region-hover:hover {
-    fill: #0a3622;
-}
+/*.map #map-svg #CA-du-Sud-Basse-Terre .region-hover:hover {*/
+/*    fill: #0a3622;*/
+/*}*/
 
 /*--------------------ANIMATION *------------------- */
 
@@ -319,3 +315,5 @@ body{
 .button-explore .animate {
     display: none;
 }
+
+/*------------------------------------Scrollable images----------------------------*/

@@ -10,5 +10,9 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="jquery-3.6.0" level="application" />
+    <orderEntry type="library" name="swiper" level="application" />
+    <orderEntry type="library" name="aos" level="application" />
+    <orderEntry type="library" name="ionicons" level="application" />
+    <orderEntry type="library" name="swiper" level="application" />
   </component>
 </module>
