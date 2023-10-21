@@ -294,7 +294,7 @@ img {
 }
 
 .carousel-buttons {
-    z-index: 999;
+    z-index: 9;
     position: absolute;
     bottom: 2px;
     left: 50%;
@@ -724,10 +724,23 @@ img {
 
 
 
-@media screen and (min-width: 300px){
+@media screen and (max-width: 575px){
+    .footer{
+        max-width: 100%;
+    }
+    .footer__data{
+        grid-template-columns: repeat(1, max-content);
+    }
     .carousel-buttons{
-        transform: translateX(-50%);
-        z-index: 0;
+        transform: translate(-50px, -80px);
+        z-index: 2;
+    }
+    .nav-btn{
+        border: 2px solid gray;
+    }
+
+    .home__data .button{
+        transform: translateY(50px);
     }
 }
 /* For medium devices */
