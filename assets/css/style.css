@@ -1,14 +1,18 @@
 html{
     font-size:12px;
+    font-family: "Poppins", sans-serif;
 }
 
 body, h1, h2, h3, p {
     margin: 0;
     padding: 0;
+    fon
 }
 
 header{
     width :100%;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3rem;
 
 }
 
@@ -57,12 +61,11 @@ nav .sticky {
 .navbar-menu a {
     text-decoration: none;
     color: white;
-    font: 1.3rem "Montserrat", sans serif;
     transition: color 0.3s ease;
 }
 
 .navbar-menu a:hover {
-    color: #0371A4;
+    color: #003C70;
 }
 
 .navbar-menu li {
@@ -75,17 +78,27 @@ nav .sticky {
 .dropdown .dropdown-menu {
     display: none;
     position: absolute;
-    background-color: white;
+    border-radius: 5px;
+    background-color: #1B8CC1;
 }
 
 .dropdown-menu li a {
-    color: black;
+    color: white;
+    padding :  20px 0;
 
 }
 
 .dropdown:hover .dropdown-menu {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
+
+.liste-demarches{
+    display: flex;
+    flex-direction: column;
+    list-style-type: disc;
+}
+
 .navbar-buttons {
     margin-right:40px;
 }
@@ -93,7 +106,6 @@ nav .sticky {
 .navbar-buttons button {
     background-color: transparent;
     color: white;
-    font: 1.3rem "Montserrat", sans serif;
     border: 2px solid white;
     border-radius: 8px;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -239,22 +251,6 @@ nav .sticky {
     margin-bottom: 45px;
 }
 
-.text-slider a{
-     background: #0a53be;
-     padding: 15px 35px;
-     color: #fff;
-     font-size: 1.1em;
-     font-weight: 500;
-     text-decoration: none;
-    border-radius: 0.5rem;
-}
-
-.text-slider a:hover{
-    background: #003C70;
-    color: #fff;
-    transform: scale(1.05);
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-}
 
 
 .slider-navigation{
@@ -446,7 +442,7 @@ nav .sticky {
     .text-first-actu #category1{
         background-color: #1B8CC1;
         width:80%;
-        font : 700 1.3rem "Montserrat", sans-serif;
+        font : 700 1.3rem "Poppins", sans-serif;
         color: white;
         text-align: center;
         padding: 17px 0;
@@ -458,7 +454,7 @@ nav .sticky {
         background-color: #efefef;
         border: 2px solid #1B8CC1;
         width: 100%;
-        font : 700 1.8rem "Montserrat", sans-serif;
+        font : 700 1.8rem "Poppins", sans-serif;
         color: #003C70;
         text-align: center;
         padding: 25px;
@@ -514,7 +510,7 @@ nav .sticky {
          z-index: 1200;
         background-color: #1B8CC1;
         width: 25%;
-        font : 700 1.3rem "Montserrat", sans-serif;
+        font : 700 1.3rem "Poppins", sans-serif;
         color: white;
         text-align: center;
         padding: 15px 0;
@@ -526,7 +522,7 @@ nav .sticky {
         background-color: #efefef;
         border: 2px solid #1B8CC1;
         width :55%;
-        font : 700 1.8rem "Montserrat", sans-serif;
+        font : 700 1.8rem "Poppins", sans-serif;
         color: #003C70;
         text-align: center;
         padding: 30px 0;
@@ -539,7 +535,7 @@ nav .sticky {
             z-index: 1200;
         background-color: #1B8CC1;
         width: 25%;
-        font : 700 1.3rem "Montserrat", sans-serif;
+        font : 700 1.3rem "Poppins", sans-serif;
         color: white;
         text-align: center;
         padding: 15px 0;
@@ -552,7 +548,7 @@ nav .sticky {
         background-color: #efefef;
         border: 2px solid #1B8CC1;
         width :55%;
-        font : 700 1.8rem "Montserrat", sans-serif;
+        font : 700 1.8rem "Poppins", sans-serif;
         color: #003C70;
         text-align: center;
         padding: 30px 0;
@@ -571,6 +567,8 @@ nav .sticky {
         margin-right: auto;
         display: flex;
         flex-direction: column;
+
+
     }
 
 .title-au-quotidien{;
@@ -582,41 +580,124 @@ nav .sticky {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.img-au-quotidien{
+.cat{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     margin : 80px;
-    margin-bottom : 20px;
+    justify-content: space-between;
 }
 
-.img-au-quotidien img{
-    width:8vw;
+.au-quotidien img{
+    width:7vw;
     height:auto;
     box-sizing: border-box;
+    margin : 0 25px;
 }
 
-.text-au-quotidien{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap:20px;
-    margin : 0 110px;
-    margin-bottom: 80px;
+.au-quotidien p{
+    margin-top: 15px;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-align: center;
     color:#003c70;
 }
 
-.transports{
-    margin-left: -30px;
+.conso{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
+.abo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
 
+.facture{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.coord{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
 
+.demande-branche{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
 
+.formulaire-service-client{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/*ZONE RESEAUX*/
+
+.reseaux{
+    background-color: #efefef;
+    border-radius: 17px;
+    width:90%;
+    margin: 100px 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-reseaux{;
+    font-size: 35px;
+    font-weight: bold;;
+    z-index: 1000;
+    color: #0371A4;
+    margin-top: -20px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.publi{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 80px;
+}
+.publi1{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.publi2{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.lien-ytb{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: black;
+    margin : 10px;
+    text-decoration: none;
+}
+
+.publi3{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
 
 
     /*ZONE FOOTER*/
@@ -634,6 +715,7 @@ nav .sticky {
         display:flex;
         flex-direction: row;
         justify-content: space-evenly;
+        margin-bottom: 15px;
     }
 
 
