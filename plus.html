@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/8f0efef31f.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="assets/css/styleContact.css">
+  <link rel="stylesheet" href="assets/css/stylePlus.css">
 
   <title>CASBT</title>
 </head>
@@ -129,97 +128,165 @@
   </section>
 </main>
 
-<section class="form__contact">
-
-  <div class="container">
-    <img src="img/shape.png" class="square" alt="" />
-    <div class="form">
-      <div class="contact-info">
-        <h3 class="title">Besoin d'aide ?</h3>
-        <p class="text">
-          Vous recherchez une information ou un interlocuteur à l’Agglo ?
-          Contactez nos services qui sont à votre disposition au 0590 99 63 20 du lundi au vendredi, de 8h00 à 14h30
-        </p>
-
-        <div class="info">
-          <div class="information">
-            <img src="assets/images/location.png" class="icon" alt="" />
-            <p>Grand Sud Caraïbe 12 rue Bébian 97100 Basse-Terre</p>
-          </div>
-          <div class="information">
-            <img src="assets/images/email.png" class="icon" alt="" />
-            <p>Gscaraibes@societe.com</p>
-          </div>
-          <div class="information">
-            <img src="assets/images/phone2.png" class="icon" alt="" />
-            <p>05 90 99 63 20</p>
-          </div>
-        </div>
-
-        <div class="social-media">
-          <p>Suivez-nous sur</p>
-          <div class="social-icons">
-            <a href="#">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#">
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
-            <a href="#">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a>
-              <i class="ri-youtube-line"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="contact-form">
-        <span class="circle one"></span>
-        <span class="circle two"></span>
-
-        <form action="index.html" autocomplete="off">
-          <h3 class="title">Contactez nous </h3>
-          <div class="input-container">
-            <input type="text" name="name" class="input" />
-            <label for=>Nom</label>
-            <span>Nom</span>
-          </div>
-          <div class="input-container">
-            <input type="email" name="email" class="input" />
-            <label for=>Email</label>
-            <span>Email</span>
-          </div>
-          <div class="input-container">
-            <input type="tel" name="phone" class="input" />
-            <label for=>Téléphone</label>
-            <span>Téléphone</span>
-          </div>
-          <div class="input-container textarea">
-            <textarea name="message" class="input"></textarea>
-            <label for=>Détails de votre requête</label>
-            <span>Détails de votre requête</span>
-          </div>
-          <input type="submit" value="Envoyez" class="btn" />
-        </form>
-      </div>
+<section class="portfolio section" id="portfolio">
+  <div class="background-bg">
+    <div class="overlay overlay-sm">
+      <img
+              src="./img/shapes/half-circle.png"
+              class="shape half-circle1"
+              alt=""
+      />
+      <img
+              src="./img/shapes/half-circle.png"
+              class="shape half-circle2"
+              alt=""
+      />
+      <img src="./img/shapes/square.png" class="shape square" alt="" />
+      <img src="./img/shapes/wave.png" class="shape wave" alt="" />
+      <img src="./img/shapes/circle.png" class="shape circle" alt="" />
+      <img
+              src="./img/shapes/triangle.png"
+              class="shape triangle"
+              alt=""
+      />
+      <img src="./img/shapes/x.png" class="shape xshape" alt="" />
     </div>
   </div>
 
-</section>
-<div class="tittle_map">
-  <h3>Plan d'accès</h3>
-</div>
-<div class="google-map">
-  <div class="emplacement">
-    <iframe frameborder="0" height="450" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3224.6338574415718!2d-61.702058726136315!3d16.02613296287506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c135fe1da129787%3A0xcde6be65f109ec63!2sRue+Victor+Schoelcher%2C+Basse-Terre%2C+Guadeloupe!5e0!3m2!1sfr!2sfr!4v1455212003053" style="border: 0px currentColor; border-image: none;" width="100%">
-    </iframe>
+  <div class="container">
+    <div class="section-header">
+      <h3 class="title" data-title="My works">Portfolio</h3>
+    </div>
+
+    <div class="section-body">
+      <div class="filter">
+        <button class="filter-btn active" data-filter="*">All</button>
+        <button class="filter-btn" data-filter=".ui">UI/UX</button>
+        <button class="filter-btn" data-filter=".webdev">Web Dev</button>
+        <button class="filter-btn" data-filter=".appdev">
+          Mobile App
+        </button>
+        <button class="filter-btn" data-filter=".logo-design">
+          Logo Design
+        </button>
+      </div>
+
+      <div class="grid">
+        <div class="grid-item logo-design">
+          <div class="gallery-image">
+            <img src="./img/portfolio/port1.jpg" alt="" />
+            <div class="img-overlay">
+              <div class="plus"></div>
+              <div class="img-description">
+                <h3>Logo Design</h3>
+                <h5>View Demo</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item webdev">
+          <div class="gallery-image">
+            <img src="./img/portfolio/port2.png" alt="" />
+            <div class="img-overlay">
+              <div class="plus"></div>
+              <div class="img-description">
+                <h3>Web Development</h3>
+                <h5>View Demo</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item ui webdev">
+          <div class="gallery-image">
+            <img src="./img/portfolio/port3.png" alt="" />
+            <div class="img-overlay">
+              <div class="plus"></div>
+              <div class="img-description">
+                <h3>Web Design</h3>
+                <h5>View Demo</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item ui">
+          <div class="gallery-image">
+            <img src="./img/portfolio/port4.png" alt="" />
+            <div class="img-overlay">
+              <div class="plus"></div>
+              <div class="img-description">
+                <h3>UI / UX Design</h3>
+                <h5>View Demo</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item logo-design">
+          <div class="gallery-image">
+            <img src="./img/portfolio/port5.jpg" alt="" />
+            <div class="img-overlay">
+              <div class="plus"></div>
+              <div class="img-description">
+                <h3>Logo Design</h3>
+                <h5>View Demo</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item appdev">
+          <div class="gallery-image">
+            <img src="./img/portfolio/port6.jpg" alt="" />
+            <div class="img-overlay">
+              <div class="plus"></div>
+              <div class="img-description">
+                <h3>App Development</h3>
+                <h5>View Demo</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item logo-design">
+          <div class="gallery-image">
+            <img src="./img/portfolio/port7.jpg" alt="" />
+            <div class="img-overlay">
+              <div class="plus"></div>
+              <div class="img-description">
+                <h3>Logo Design</h3>
+                <h5>View Demo</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item appdev ui">
+          <div class="gallery-image">
+            <img src="./img/portfolio/port8.png" alt="" />
+            <div class="img-overlay">
+              <div class="plus"></div>
+              <div class="img-description">
+                <h3>App Development</h3>
+                <h5>View Demo</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item ui webdev">
+          <div class="gallery-image">
+            <img src="./img/portfolio/port9.png" alt="" />
+            <div class="img-overlay">
+              <div class="plus"></div>
+              <div class="img-description">
+                <h3>Web Design</h3>
+                <h5>View Demo</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="more-folio">
+        <a href="#" class="btn">More Folio</a>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 <!--==================== FOOTER ====================-->
 <footer class="footer">
   <div class="footer__container container grid">
@@ -330,7 +397,6 @@
   </div>
 </footer>
 
-
 <!--========== SCROLL UP ==========-->
 <a href="#" class="scrollup" id="scroll-up">
   <i class="ri-arrow-up-line"></i>
@@ -341,6 +407,5 @@
 
 <!--=============== MAIN JS ===============-->
 <script src="assets/js/appActu.js"></script>
-<script src="assets/js/appContact.js"></script>
 </body>
 </html>

@@ -127,29 +127,50 @@
     </section>
 
     <!--==================== ABOUT ====================-->
+    <div class="video-modal hidden" id="videoModal">
+        <div class="video-content">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/A1cz-AnZA5M" title="Vidéo" frameborder="0" allowfullscreen id="videoFrame"></iframe>
+            <button class="close-video-modal">
+                <i class="ri-close-line"></i>
+            </button>
+        </div>
+    </div>
+
     <section class="about section" id="about">
         <div class="about__container container grid">
             <div class="about__data">
                 <h2 class="section__title">
                     En savoir plus<br>
-                    sur CABST
+                    sur CASBT
                 </h2>
-
                 <p class="about__description">
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    Située au cœur des Caraïbes, Grand Sub Caraïbes est un joyau tropical. Ses plages de sable blanc, sa culture vibrante et son économie florissante en font une destination incontournable. Découvrez la beauté naturelle de la région, imprégnée d'influences culturelles diverses. Que vous soyez un voyageur en quête d'aventure, un amateur de plages paradisiaques ou un investisseur potentiel, Grand Sub Caraïbes vous séduira par sa richesse et sa diversité.
                 </p>
-
-                <a href="#" class="button">
+                <a href="#" class="button open-video-modal">
                     Visiter CASBT <i class="ri-arrow-right-line"></i>
                 </a>
             </div>
-
             <div class="about__image">
                 <img src="assets/images/about-beach.jpg" alt="about image" class="about__img">
                 <div class="about__shadow"></div>
             </div>
         </div>
     </section>
+
+    <script>
+        var videoFrame = document.getElementById("videoFrame");
+
+        document.querySelector(".open-video-modal").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.querySelector("#videoModal").style.display = "flex";
+            videoFrame.src = "https://www.youtube.com/embed/A1cz-AnZA5M?autoplay=1"; // Ajouter ?autoplay=1 pour démarrer automatiquement la vidéo
+        });
+
+        document.querySelector(".close-video-modal").addEventListener("click", function() {
+            document.querySelector("#videoModal").style.display = "none";
+            videoFrame.src = ""; // Arrêter la vidéo en effaçant la source
+        });
+    </script>
 
     <!--==================== POPULAR ====================-->
     <section class="popular section" id="popular">
@@ -266,7 +287,8 @@
                 </p>
 
                 <form action="" class="join__form">
-                    <input type="email" placeholder="Votre mail" class="join__input">
+                    <input type="email" placeholder="Votre mail" class="join__input" id="emailInput">
+
 
                     <button class="join__button button">
                         Souscrire <i class="ri-arrow-right-line"></i>

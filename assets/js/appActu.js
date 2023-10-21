@@ -1,4 +1,4 @@
-/*=============== SHOW MENU ===============*/
+
 const navMenu = document.getElementById('nav-menu'),
     navToggle = document.getElementById('nav-toggle'),
     navClose = document.getElementById('nav-close')
@@ -82,3 +82,22 @@ sr.reveal('.home__card', {delay : 600, distance: '100px', interval: 100})
 sr.reveal('.about__data, .join__image', {origin: 'right'})
 sr.reveal('.about__image, .join__data', {origin: 'left'})
 sr.reveal('.popular__card', {interval: 200})
+
+// BOUTON SOUSCRIRE
+const joinButton = document.querySelector('.join__button');
+joinButton.addEventListener('click', function(event) {
+    event.preventDefault();
+
+    const emailInput = document.querySelector('#emailInput');
+    const email = emailInput.value;
+
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+    if (emailPattern.test(email)) {
+        alert('Votre inscription à NewsLetter a bien été prise en compte ! Nous vous remercions de votre confiance !');
+    } else {
+        alert("L'adresse e-mail n'est pas valide. Veuillez saisir une adresse e-mail valide.");
+    }
+});
+
+

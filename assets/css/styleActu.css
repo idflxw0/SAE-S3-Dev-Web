@@ -121,10 +121,11 @@ img {
 .header{
     position: fixed;
     width: 100%;
-    background-color: transparent;
+    background: linear-gradient(#1B8CC1 70%,transparent);
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
+    height: 100px;
 }
 
 .nav{
@@ -158,10 +159,10 @@ img {
 
 .nav__button{
     background-color: transparent;
-    border: 2px solid darkblue;
+    border: 2px solid #ffffff;
     border-radius: 5px;
     padding: 2px;
-    color: darkblue;
+    color: #ffffff;
 }
 
 .nav__button:hover{
@@ -198,7 +199,7 @@ img {
 
 .nav__link{
     position: relative;
-    color: dodgerblue;
+    color: white;
     font-family: var(--second-font);
     font-weight: var(--font-medium);
 }
@@ -229,8 +230,16 @@ img {
     top: 0;
 }
 
-/* Effet flou */
+.blur-header {
+    position: fixed;
+    width: 100%;
+    background: transparent;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+}
 
+/* Effet flou */
 .blur-header::after{
     content: '';
     position: absolute;
@@ -242,6 +251,7 @@ img {
     left: 0;
     z-index: -1;
 }
+
 
 /* Active link */
 
@@ -284,7 +294,7 @@ img {
 }
 
 .carousel-buttons {
-    z-index: 999;
+    z-index: 9;
     position: absolute;
     bottom: 2px;
     left: 50%;
@@ -377,6 +387,43 @@ img {
 
 .button:hover i{
     transform: translateX(.25rem);
+}
+/* Fenetre pop up*/
+.video-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.close-video-modal {
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    color: #666;
+    font-size: 16px;
+}
+
+.hidden {
+    display: none;
 }
 /*=============== ABOUT ===============*/
 
@@ -714,10 +761,23 @@ img {
 
 
 
-@media screen and (min-width: 300px){
+@media screen and (max-width: 575px){
+    .footer{
+        max-width: 100%;
+    }
+    .footer__data{
+        grid-template-columns: repeat(1, max-content);
+    }
     .carousel-buttons{
-        transform: translateX(-50%);
-        z-index: 0;
+        transform: translate(-50px, -80px);
+        z-index: 2;
+    }
+    .nav-btn{
+        border: 2px solid gray;
+    }
+
+    .home__data .button{
+        transform: translateY(50px);
     }
 }
 /* For medium devices */
@@ -962,3 +1022,6 @@ img {
         right: 3rem;
     }
 }
+
+
+
