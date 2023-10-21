@@ -8,11 +8,12 @@ body{
     overflow-x: hidden;
     min-height: 100vh;
 }
+
 .card-fill {
     display: flex;
     height: 100vh;
     border: 1px solid #ddd;  /* Light grey border */
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);  /* Subtle shadow for a lifted effect */
+    box-shadow: 1px 4px 8px rgba(0,0,0,0.1);  /* Subtle shadow for a lifted effect */
     /*border-radius: 10px;*/
 }
 
@@ -81,6 +82,7 @@ body{
 
 .right-image {
     animation-name: slideInImage;
+    display: flex;
 }
 
 @keyframes slideInText {
@@ -185,14 +187,6 @@ body{
     }
 }
 /*---------------------------SVG MAP STYLES---------------------------------*/
-.map-image path {
-    fill: #b9b9b9; /* default color */
-}
-
-.map .g .region {
-    fill: #0a53be;
-}
-
 /*.map #map-svg #CA-du-Sud-Basse-Terre .region-hover:hover {*/
 /*    fill: #0a3622;*/
 /*}*/
@@ -225,4 +219,79 @@ body{
     display: none;
 }
 
-/*------------------------------------Scrollable images----------------------------*/
+/*-----------------------------------------------*\
+                    Media Queries
+\*-----------------------------------------------*/
+@media (max-width: 768px) {
+    .card-fill {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .card-1,
+    .card-3
+    {
+        flex-direction: column-reverse;
+    }
+    .left-text, .right-image {
+        flex: 100%;
+    }
+
+    .right-image img {
+        width: 100%;
+        height: auto;
+    }
+    .map {
+        flex-direction: column-reverse; /* Swap positions: .territory on top and .map-image below */
+    }
+    .map-image {
+        width: 100%; /* Take full width */
+    }
+    .territory {
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        transform: none;
+        margin-bottom: 30px;
+    }
+}
+@media(max-width: 1200px){
+    body {
+        height: calc(100vh - 120px) !important;
+    }
+}
+@media(max-width: 1400px){
+    .card-fill {
+        flex-direction: column;
+        height: auto;
+    }
+    .card-1,
+    .card-3
+    {
+        flex-direction: column-reverse;
+    }
+    .left-text, .right-image {
+        flex: 100%;
+    }
+
+    .right-image img {
+        width: 100%;
+        height: auto;
+    }
+    .map {
+        flex-direction: column-reverse; /* Swap positions: .territory on top and .map-image below */
+    }
+    .map-image {
+        width: 100%; /* Take full width */
+    }
+    .territory {
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        transform: none;
+        margin-bottom: 30px;
+    }
+
+}
