@@ -1,6 +1,4 @@
 body, html {
-    margin: 0;
-    padding: 0;
     height: 100%;
     font-family: 'Roboto', sans-serif;
     max-height: 100vh;
@@ -8,107 +6,14 @@ body, html {
 }
 body{
     overflow-x: hidden;
-    scroll-snap-type: y mandatory;
     min-height: 100vh;
-    /*background: #fff;*/
-
 }
-
-/*--------------HOME--------------*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-.home{
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.home::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to top, #094b65, transparent);
-    z-index: 10;
-}
-
-.home img{
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    object-fit: cover;
-    pointer-events: none;
-}
-
-.home #text{
-    position: absolute;
-    font-size: 10vw;
-    color: #094b65;
-    text-align: center;
-    line-height: 0.5em;
-    font-family: 'Rancho', cursive;
-    transform: translateY(-50%);
-}
-
-.home #text span{
-    font-size: 0.20em;
-    letter-spacing: 2px;
-    font-weight: 400;
-    font-family: 'Poppins', sans-serif;
-}
-
-#btn{
-    padding: 8px 30px;
-    display: inline-block;
-    text-decoration: none;
-    background: #fff;
-    color: #094b65;
-    font-size: 1.2em;
-    font-weight: 500;
-    letter-spacing: 2px;
-    border-radius: 40px;
-    transform: translateY(100px);
-}
-
-#btn .animate {
-    visibility: hidden;
-}
-
-.sea{
-    position: relative;
-    padding: 100px;
-    background: #094b65;
-}
-
-.sea h2{
-    font-size: 3.5em;
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-.sea p{
-    font-size: 1em;
-    color: #fff;
-}
-/*-------------- END HOME--------------*/
 
 .card-fill {
     display: flex;
     height: 100vh;
     border: 1px solid #ddd;  /* Light grey border */
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);  /* Subtle shadow for a lifted effect */
+    box-shadow: 1px 4px 8px rgba(0,0,0,0.1);  /* Subtle shadow for a lifted effect */
     /*border-radius: 10px;*/
 }
 
@@ -177,6 +82,7 @@ body{
 
 .right-image {
     animation-name: slideInImage;
+    display: flex;
 }
 
 @keyframes slideInText {
@@ -252,6 +158,7 @@ body{
 
 .territory a {
     display: inline-block;
+    font-size: 1.2rem;
     margin: 5px 15px;
     padding: 10px 20px; /* Adjusted padding for a more button-like appearance */
     background-color: #2C3E50; /* Dark blue color */
@@ -280,17 +187,9 @@ body{
     }
 }
 /*---------------------------SVG MAP STYLES---------------------------------*/
-.map-image path {
-    fill: #b9b9b9; /* default color */
-}
-
-.map .g .region {
-    fill: #0a53be;
-}
-
-.map #map-svg #CA-du-Sud-Basse-Terre .region-hover:hover {
-    fill: #0a3622;
-}
+/*.map #map-svg #CA-du-Sud-Basse-Terre .region-hover:hover {*/
+/*    fill: #0a3622;*/
+/*}*/
 
 /*--------------------ANIMATION *------------------- */
 
@@ -318,4 +217,81 @@ body{
 
 .button-explore .animate {
     display: none;
+}
+
+/*-----------------------------------------------*\
+                    Media Queries
+\*-----------------------------------------------*/
+@media (max-width: 768px) {
+    .card-fill {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .card-1,
+    .card-3
+    {
+        flex-direction: column-reverse;
+    }
+    .left-text, .right-image {
+        flex: 100%;
+    }
+
+    .right-image img {
+        width: 100%;
+        height: auto;
+    }
+    .map {
+        flex-direction: column-reverse; /* Swap positions: .territory on top and .map-image below */
+    }
+    .map-image {
+        width: 100%; /* Take full width */
+    }
+    .territory {
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        transform: none;
+        margin-bottom: 30px;
+    }
+}
+@media(max-width: 1200px){
+    body {
+        height: calc(100vh - 120px) !important;
+    }
+}
+@media(max-width: 1400px){
+    .card-fill {
+        flex-direction: column;
+        height: auto;
+    }
+    .card-1,
+    .card-3
+    {
+        flex-direction: column-reverse;
+    }
+    .left-text, .right-image {
+        flex: 100%;
+    }
+
+    .right-image img {
+        width: 100%;
+        height: auto;
+    }
+    .map {
+        flex-direction: column-reverse; /* Swap positions: .territory on top and .map-image below */
+    }
+    .map-image {
+        width: 100%; /* Take full width */
+    }
+    .territory {
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        transform: none;
+        margin-bottom: 30px;
+    }
+
 }
