@@ -34,6 +34,9 @@ html {
         height: auto;
     }
 }
+@media (max-width: 900px){
+
+}
 @media (min-width: 1440px) {
     html {
         zoom: 1.1;
@@ -166,12 +169,6 @@ html {
     bottom: 2rem;
     left: 2rem;
     color: var(--white);
-}
-
-.food-rating {
-    padding-top: 1rem;
-    display: flex;
-    gap: 1rem;
 }
 
 .rating ion-icon {

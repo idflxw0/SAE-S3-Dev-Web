@@ -31,14 +31,14 @@ body{
 }
 
 .h3-title-left {
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 700;
     margin-bottom: 10px;
     /*text-shadow: 2px 2px 4px rgba(0,0,0,0.6); !* Text shadow for better readability *!*/
 }
 
 .p-text-left {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.8;
     /*background-color: rgba(255, 255, 255, 0.2); !* Slightly white transparent bg *!*/
     padding: 15px;
@@ -222,6 +222,34 @@ body{
 /*-----------------------------------------------*\
                     Media Queries
 \*-----------------------------------------------*/
+@media (max-width: 900px) {
+    .body {
+        height: calc(100vh - 120px) !important;
+    }
+    .left-text, .right-image {
+        flex: 100%;
+    }
+    .h3-title-left {
+        font-size: 22px;
+    }
+    .p-text-left{
+        font-size: 14px;
+    }
+
+    .map-image {
+
+        width: 100%; /* Take full width */
+    }
+    .territory {
+        width: 50%;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        transform: none;
+        margin-bottom: 30px;
+    }
+}
+
 @media (max-width: 768px) {
     .card-fill {
         flex-direction: column;
@@ -256,42 +284,15 @@ body{
         margin-bottom: 30px;
     }
 }
+
+
 @media(max-width: 1200px){
     body {
         height: calc(100vh - 120px) !important;
     }
 }
 @media(max-width: 1400px){
-    .card-fill {
-        flex-direction: column;
-        height: auto;
+    body {
+        height: calc(100vh - 120px) !important;
     }
-    .card-1,
-    .card-3
-    {
-        flex-direction: column-reverse;
-    }
-    .left-text, .right-image {
-        flex: 100%;
-    }
-
-    .right-image img {
-        width: 100%;
-        height: auto;
-    }
-    .map {
-        flex-direction: column-reverse; /* Swap positions: .territory on top and .map-image below */
-    }
-    .map-image {
-        width: 100%; /* Take full width */
-    }
-    .territory {
-        width: 100%;
-        height: auto;
-        flex-wrap: wrap;
-        justify-content: center;
-        transform: none;
-        margin-bottom: 30px;
-    }
-
 }
