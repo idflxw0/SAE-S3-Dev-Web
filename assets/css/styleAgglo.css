@@ -222,7 +222,7 @@ body{
 /*-----------------------------------------------*\
                     Media Queries
 \*-----------------------------------------------*/
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .body {
         height: calc(100vh - 120px) !important;
     }
@@ -230,7 +230,7 @@ body{
         flex: 100%;
     }
     .h3-title-left {
-        font-size: 22px;
+        font-size: 18px;
     }
     .p-text-left{
         font-size: 14px;
@@ -248,6 +248,10 @@ body{
         transform: none;
         margin-bottom: 30px;
     }
+
+
+
+
 }
 
 @media (max-width: 768px) {
@@ -283,6 +287,7 @@ body{
         transform: none;
         margin-bottom: 30px;
     }
+
 }
 
 
@@ -290,9 +295,19 @@ body{
     body {
         height: calc(100vh - 120px) !important;
     }
+    .left-text {
+        font-size: 14px;
+    }
+    .p-text-left {
+        font-size: 14px;
+    }
 }
 @media(max-width: 1400px){
     body {
         height: calc(100vh - 120px) !important;
     }
+    .h3-title-left {
+        font-size: 20px;
+    }
+
 }

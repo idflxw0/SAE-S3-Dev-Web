@@ -87,10 +87,15 @@ html {
 
 .title-h2 {
     font-size: 2.5rem;
-    padding: 3rem 0;
+    padding: 1rem 0;
+    color: white;
 }
 .text-container {
     font-size: 1.6rem;
+    color: white;
+}
+.name {
+    color: white;
 }
 .text-center {
     text-align: center;
