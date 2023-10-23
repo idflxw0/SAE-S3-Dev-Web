@@ -372,6 +372,15 @@ img {
     justify-content: center;
     padding: 50px;
 }
+
+.desc {
+    text-align: center;
+    padding: 50px;
+}
+
+.desc h3 {
+    text-decoration: underline;
+}
 /*=============== BUTTON ===============*/
 
 .button{
