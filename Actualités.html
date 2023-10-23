@@ -129,7 +129,7 @@
     <!--==================== ABOUT ====================-->
     <div class="video-modal hidden" id="videoModal">
         <div class="video-content">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/A1cz-AnZA5M" title="Vidéo" frameborder="0" allowfullscreen id="videoFrame"></iframe>
+            <iframe width="1000" height="500" src="https://www.youtube.com/embed/A1cz-AnZA5M" title="Vidéo" frameborder="0" allowfullscreen id="videoFrame"></iframe>
             <button class="close-video-modal">
                 <i class="ri-close-line"></i>
             </button>
@@ -163,64 +163,63 @@
         document.querySelector(".open-video-modal").addEventListener("click", function(event) {
             event.preventDefault();
             document.querySelector("#videoModal").style.display = "flex";
-            videoFrame.src = "https://www.youtube.com/embed/A1cz-AnZA5M?autoplay=1"; // Ajouter ?autoplay=1 pour démarrer automatiquement la vidéo
+            videoFrame.src = "https://www.youtube.com/embed/A1cz-AnZA5M?autoplay=1";
         });
 
         document.querySelector(".close-video-modal").addEventListener("click", function() {
             document.querySelector("#videoModal").style.display = "none";
-            videoFrame.src = ""; // Arrêter la vidéo en effaçant la source
+            videoFrame.src = "";
         });
     </script>
 
     <!--==================== POPULAR ====================-->
     <section class="popular section" id="popular">
         <h2 class="section__title">
-            Les actualités <br>
-            du moment
+            Les actualités <br> du moment
         </h2>
 
         <div class="popular__container container grid">
             <article class="popular__card">
                 <div class="popular__image">
                     <img src="assets/images/tri.jpeg" alt="popular image" class="popular__img">
-                    <div class="popular__shadow"></div>
+                    <div class="popular__overlay" onclick="openVideoModal('https://www.youtube.com/embed/yUwUEWtVAvU')">
+                        En savoir plus
+                    </div>
                 </div>
-
                 <h2 class="popular__title">
                     Utilisons les bornes !
-
                 </h2>
-
                 <div class="popular__location">
-                    <span>Une courte vidéo sur l’importance du tri sélectif.</span>
+                    <span>Une courte vidéo sur l'importance du tri sélectif.</span>
                 </div>
             </article>
 
             <article class="popular__card">
                 <div class="popular__image">
                     <img src="assets/images/collecte.jpeg" alt="popular image" class="popular__img">
-                    <div class="popular__shadow"></div>
+                    <div class="popular__overlay" onclick="openDownloadModal()">
+                        En savoir plus
+                    </div>
                 </div>
-
                 <h2 class="popular__title">
                     Collecte en apport volontaire
                 </h2>
-
                 <div class="popular__location">
                     <span>Calendrier de collecte semestriel pour 2023.</span>
                 </div>
             </article>
 
+
             <article class="popular__card">
                 <div class="popular__image">
                     <img src="assets/images/montagne.jpeg" alt="popular image" class="popular__img">
-                    <div class="popular__shadow"></div>
+                    <div class="popular__overlay" onclick="openVideoModal('URL_DE_VOTRE_VIDEO_2')">
+                        En savoir plus
+                    </div>
                 </div>
-
                 <h2 class="popular__title">
                     Bonne rentrée 2023-2024 !
                 </h2>
-
                 <div class="popular__location">
                     <span>Thierry ABELLI, président de l’agglomération, vous souhaite une excellente rentrée !</span>
                 </div>
@@ -229,13 +228,13 @@
             <article class="popular__card">
                 <div class="popular__image">
                     <img src="assets/images/marin.webp" alt="popular image" class="popular__img">
-                    <div class="popular__shadow"></div>
+                    <div class="popular__overlay" onclick="openCalendarModal('URL_DE_VOTRE_CALENDRIER_2')">
+                        En savoir plus
+                    </div>
                 </div>
-
                 <h2 class="popular__title">
                     Nouveautés Transports
                 </h2>
-
                 <div class="popular__location">
                     <span>Mise en place de rotations maritimes entre les ports de Terre de Haut et Terre de Bas.</span>
                 </div>
@@ -244,13 +243,13 @@
             <article class="popular__card">
                 <div class="popular__image">
                     <img src="assets/images/energie.png" alt="popular image" class="popular__img">
-                    <div class="popular__shadow"></div>
+                    <div class="popular__overlay" onclick="openVideoModal('URL_DE_VOTRE_VIDEO_3')">
+                        En savoir plus
+                    </div>
                 </div>
-
                 <h2 class="popular__title">
                     Comment réduire sa consommation énergétique ?
                 </h2>
-
                 <div class="popular__location">
                     <span>Le logement est le premier poste de consommation d’énergie sur notre territoire tandis que c’est le transport qui passe devant en terme d’émissons de gaz à effet de serre.</span>
                 </div>
@@ -259,20 +258,120 @@
             <article class="popular__card">
                 <div class="popular__image">
                     <img src="assets/images/politique.png" alt="popular image" class="popular__img">
-                    <div class="popular__shadow"></div>
+                    <div class="popular__overlay" onclick="openCalendarModal('URL_DE_VOTRE_CALENDRIER_3')">
+                        En savoir plus
+                    </div>
                 </div>
-
                 <h2 class="popular__title">
                     Que fait-on ?
                 </h2>
-
                 <div class="popular__location">
                     <span>Nos projets, nos programmes, tout se trouve ici !</span>
                 </div>
             </article>
+
+            <!-- La fenêtre modale -->
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <div id="modalContent"></div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <script>
+        function openVideoModal(videoURL) {
+            const modal = document.getElementById("myModal");
+            const modalContent = document.getElementById("modalContent");
+            modalContent.innerHTML = '<iframe width="1000" height="500" src="' + videoURL + '" frameborder="0" allowfullscreen></iframe>';
+            modal.style.display = "block";
+        }
+
+        function openDownloadModal() {
+            const modal = document.getElementById("myModal");
+            const modalContent = document.getElementById("modalContent");
+            modalContent.innerHTML = `
+        <h3>Calendrier des collectes par communes:</h3>
+        <ul>
+            <li>
+                <div class="file-item">
+                    <a href="URL_DU_FICHIER_1" download>VIEUX-HABITANTS 2023</a>
+                    <i class="fa-solid fa-download download-icon" onclick="downloadFile('URL_DU_FICHIER_1')"></i>
+                </div>
+            </li>
+            <li>
+                <div class="file-item">
+                    <a href="URL_DU_FICHIER_2" download>TROIS-RIVIERES 2023</a>
+                    <i class="fa-solid fa-download download-icon" onclick="downloadFile('URL_DU_FICHIER_2')"></i>
+                </div>
+            </li>
+            <li>
+                <div class="file-item">
+                    <a href="URL_DU_FICHIER_1" download>BOUILLANTE 2023</a>
+                    <i class="fa-solid fa-download download-icon" onclick="downloadFile('URL_DU_FICHIER_1')"></i>
+                </div>
+            </li>
+            <li>
+                <div class="file-item">
+                    <a href="URL_DU_FICHIER_2" download>BAILLIF 2023</a>
+                    <i class="fa-solid fa-download download-icon" onclick="downloadFile('URL_DU_FICHIER_2')"></i>
+                </div>
+            </li>
+            <li>
+                <div class="file-item">
+                    <a href="URL_DU_FICHIER_1" download>SAINT-CLAUDE 2023</a>
+                    <i class="fa-solid fa-download download-icon" onclick="downloadFile('URL_DU_FICHIER_1')"></i>
+                </div>
+            </li>
+            <li>
+                <div class="file-item">
+                    <a href="URL_DU_FICHIER_2" download>VIEUX-FORT 2023</a>
+                    <i class="fa-solid fa-download download-icon" onclick="downloadFile('URL_DU_FICHIER_2')"></i>
+                </div>
+            </li>
+            <li>
+                <div class="file-item">
+                    <a href="URL_DU_FICHIER_1" download>CAPESTERRE BELLE EAU 2023</a>
+                    <i class="fa-solid fa-download download-icon" onclick="downloadFile('URL_DU_FICHIER_1')"></i>
+                </div>
+            </li>
+            <li>
+                <div class="file-item">
+                    <a href="URL_DU_FICHIER_2" download>GOURBEYRE 2023</a>
+                    <i class="fa-solid fa-download download-icon" onclick="downloadFile('URL_DU_FICHIER_2')"></i>
+                </div>
+            </li>
+            <li>
+                <div class="file-item">
+                    <a href="URL_DU_FICHIER_2" download>BASSE-TERRE 2023</a>
+                    <i class="fa-solid fa-download download-icon" onclick="downloadFile('CALENDRIER-DE-COLLECTE-CAGSC-BASSE-TERRE-2023.pdf')"></i>
+                </div>
+            </li>
+        </ul>`;
+            modal.style.display = "block";
+        }
+
+        function downloadFile(fileURL) {
+            const link = document.createElement("a");
+            link.href = fileURL;
+            link.download = true;
+            link.click();
+        }
+        function closeModal() {
+            const modal = document.getElementById("myModal");
+            modal.style.display = "none";
+            const modalContent = document.getElementById("modalContent");
+            modalContent.innerHTML = '';
+        }
+
+        // Ferme la fenêtre modale lorsque l'utilisateur clique à l'extérieur de la fenêtre
+        window.addEventListener("click", function(event) {
+            if (event.target == document.getElementById("myModal")) {
+                closeModal();
+            }
+        });
+    </script>
     <!--==================== JOIN ====================-->
     <section class="join section">
         <div class="join__container container grid">
