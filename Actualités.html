@@ -29,7 +29,7 @@
                 </li>
 
                 <li class="nav__item">
-                    <a href="" class="nav__link">Notre Agglomération</a>
+                    <a href="agglo.html" class="nav__link">Notre Agglomération</a>
                 </li>
 
                 <li class="nav__item">
@@ -270,7 +270,6 @@
                 </div>
             </article>
 
-            <!-- La fenêtre modale -->
             <div id="myModal" class="modal">
                 <div class="modal-content">
                     <span class="close" onclick="closeModal()">&times;</span>
@@ -279,6 +278,13 @@
             </div>
         </div>
     </section>
+
+    <section class="buttons__container">
+        <a href="#" class="buttons__button">1</a>
+        <a href="#" class="buttons__button">2</a>
+        <a href="#" class="buttons__button">SUIVANT</a>
+    </section>
+
 
     <script>
         function openVideoModal(videoURL) {
@@ -365,7 +371,6 @@
             modalContent.innerHTML = '';
         }
 
-        // Ferme la fenêtre modale lorsque l'utilisateur clique à l'extérieur de la fenêtre
         window.addEventListener("click", function(event) {
             if (event.target == document.getElementById("myModal")) {
                 closeModal();
