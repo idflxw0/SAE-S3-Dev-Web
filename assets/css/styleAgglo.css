@@ -222,6 +222,7 @@ body{
 /*-----------------------------------------------*\
                     Media Queries
 \*-----------------------------------------------*/
+
 @media (max-width: 1000px) {
     .body {
         height: calc(100vh - 120px) !important;
@@ -253,8 +254,7 @@ body{
 
 
 }
-
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .card-fill {
         flex-direction: column;
         height: auto;
@@ -289,8 +289,6 @@ body{
     }
 
 }
-
-
 @media(max-width: 1200px){
     body {
         height: calc(100vh - 120px) !important;
