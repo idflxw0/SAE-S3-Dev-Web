@@ -557,6 +557,7 @@ textarea.input {
     transform: translateY(0);
 }
 
+
 .btn {
     padding: 0.6rem 1.3rem;
     background-color: #fff;
@@ -596,7 +597,7 @@ textarea.input {
     opacity: 0;
     transition: 0.3s;
     height: 5px;
-    background-color: #0cadcb;
+    background-color: dodgerblue;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -621,6 +622,7 @@ textarea.input {
     width: 50%;
     opacity: 1;
 }
+
 
 .contact-info {
     padding: 2.3rem 2.2rem;
