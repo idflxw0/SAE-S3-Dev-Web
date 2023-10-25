@@ -216,6 +216,7 @@ img {
     text-align: center;
 }
 
+
 .nav__link:hover::after{
     width: 70%;
 }
