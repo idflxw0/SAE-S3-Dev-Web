@@ -6,7 +6,6 @@ html{
 body, h1, h2, h3, p {
     margin: 0;
     padding: 0;
-    fon
 }
 
 header{
@@ -111,6 +110,11 @@ nav .sticky {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.acces-compte a{
+    color: white;
+    text-decoration: none;
+
+}
 
 .navbar-buttons button:hover {
     background-color: #0a53be;
