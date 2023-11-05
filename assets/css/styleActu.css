@@ -72,7 +72,7 @@ input {
 }
 
 h1, h2, h4 {
-    color: dodgerblue;
+    color: #0371A4 ;
     font-family: var(--second-font);
     font-weight: var(--font-semi-bold);
 }
@@ -174,6 +174,9 @@ img {
 .nav__list{
     text-align: left;
 }
+
+
+
 /* Responsive pour les petits mobiles */
 @media screen and (max-width: 1023px){
     .nav__menu{
@@ -312,7 +315,7 @@ img {
 }
 
 .nav-btn.active {
-    background: #0d6efd;
+    background: #0371A4;
 }
 
 .nav-btn:not(:last-child) {
@@ -362,7 +365,7 @@ img {
 /*=============== BUTTON ===============*/
 
 .button{
-    background-color: dodgerblue;
+    background-color: #0371A4;
     padding: 1.25rem 1.5rem;
     color: var(--title-color);
     display: inline-flex;
@@ -796,7 +799,7 @@ img {
 .partner-section {
     background-color: #fff;
     color: #7e7e7e;
-    padding: 30px 0;
+    padding: 20px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -822,6 +825,10 @@ img {
     max-width: 100%;
     height: auto;
 }
+#ademe {
+    width: 7%;
+}
+
 
 
 .copyright-text {
