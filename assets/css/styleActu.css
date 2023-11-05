@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Poppins:wght@400;500&display=swap");
 
-/*=============== VARIABLES CSS ===============*/
 :root {
     --header-height: 3.5rem;
 
@@ -851,9 +850,6 @@ img {
 .scrollup:hover{
     transform: translateY(-.25rem);
 }
-
-
-/*=============== SCROLL UP ===============*/
 
 .show-scroll{
     bottom: 3rem;

@@ -3,14 +3,14 @@ const navMenu = document.getElementById('nav-menu'),
     navToggle = document.getElementById('nav-toggle'),
     navClose = document.getElementById('nav-close')
 
-/*===== MENU SHOW =====*/
+/*===== affichage menu =====*/
 if(navToggle){
     navToggle.addEventListener('click', () =>{
         navMenu.classList.add('show-menu')
     })
 }
 
-/*===== MENU HIDDEN =====*/
+/*===== cache menu =====*/
 if(navClose){
     navClose.addEventListener('click', () =>{
         navMenu.classList.remove('show-menu')
@@ -68,7 +68,7 @@ const scrollActive = () =>{
 }
 window.addEventListener('scroll', scrollActive)
 
-/*=============== SCROLL REVEAL ANIMATION ===============*/
+/*=============== animation scroll  ===============*/
 
 const sr = ScrollReveal({
     origin:'top',
