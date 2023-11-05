@@ -125,8 +125,8 @@ body{
 
 }
 .map-image {
-    width: 50%; /* or whatever percentage or pixel value you desire */
-    height: 100vh; /* or another height that fits your design */
+    width: 50%;
+    height: 100vh;
     object-fit: contain;
     position: relative;
 
@@ -152,7 +152,7 @@ body{
     justify-content: center;
     margin-bottom: 20px;
     transform: translateY(200px);
-    width: 35%; /* Adjust this based on your design needs */
+    width: 35%;
     height: 45%;
 }
 
@@ -160,23 +160,23 @@ body{
     display: inline-block;
     font-size: 1.2rem;
     margin: 5px 15px;
-    padding: 10px 20px; /* Adjusted padding for a more button-like appearance */
-    background-color: #2C3E50; /* Dark blue color */
-    border: none; /* Remove border */
-    border-radius: 25px; /* Rounded edges */
+    padding: 10px 20px;
+    background-color: #2C3E50;
+    border: none; /
+    border-radius: 25px; /
     text-decoration: none;
-    color: #fff; /* White text color */
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Added transform transition */
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
     font-weight: 500;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    cursor: pointer; /* Cursor appearance when hovering */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 .territory a:hover {
-    background-color: #34495E; /* Slightly darker blue when hovered */
-    color: #EAEDED; /* Slightly dimmed white color */
-    transform: translateY(-3px); /* Button moves up a bit when hovered */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Bigger shadow on hover */
+    background-color: #34495E;
+    color: #EAEDED;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 @media only screen and (max-width: 600px) {
     .h3-title-left {
@@ -186,10 +186,6 @@ body{
         font-size: 3vw;
     }
 }
-/*---------------------------SVG MAP STYLES---------------------------------*/
-/*.map #map-svg #CA-du-Sud-Basse-Terre .region-hover:hover {*/
-/*    fill: #0a3622;*/
-/*}*/
 
 /*--------------------ANIMATION *------------------- */
 
@@ -249,10 +245,6 @@ body{
         transform: none;
         margin-bottom: 30px;
     }
-
-
-
-
 }
 @media (max-width: 800px) {
     .card-fill {
