@@ -1,17 +1,18 @@
 html{
-    font-size:12px;
+    font-size: 12px;
     font-family: "Poppins", sans-serif;
 }
 
 body, h1, h2, h3, p {
     margin: 0;
     padding: 0;
+    font-family: "Poppins", sans-serif;
 }
 
 header{
     width :100%;
     font-family: "Poppins", sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
 
 }
 
@@ -111,6 +112,8 @@ nav .sticky {
 }
 
 .acces-compte a{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.7rem;
     color: white;
     text-decoration: none;
 
@@ -125,7 +128,7 @@ nav .sticky {
 .btn-responsive-menu{
     display : none;
     position : fixed;
-    top: 20px;
+    top: 25px;
     right:40px;
     width:30px;
 }
@@ -181,14 +184,14 @@ nav .sticky {
     .navbar-buttons  {
         display: block;
         position:absolute;
-        top:20px;
-        right:100px;
-
+        top:25px;
+        left:130px;
     }
 
+
     .navbar-buttons button {
-        font-size: 3rem;
-        margin: 0 15px;
+        font-size: 2.5rem;
+
     }
     .btn-responsive-menu {
         display : block;
@@ -249,10 +252,13 @@ nav .sticky {
     letter-spacing: 5px;
     line-height: 75px;
     margin-bottom: 40px;
+    text-shadow: 1px 1px 15px black;
 }
 .text-slider p{
+    color : white;
     font-size:2rem;
     margin-bottom: 45px;
+    text-shadow: 5px 5px 15px black;
 }
 
 
@@ -260,7 +266,7 @@ nav .sticky {
 .slider-navigation{
        z-index: 888;
        position: absolute;
-       top : 45%;
+       top : 50%;
        display: flex;
        justify-content: center;
        align-items: center;
@@ -468,6 +474,7 @@ nav .sticky {
 
 
 
+
     .secondary-actu {
         z-index:1000;
         margin-top: 115px;
@@ -560,9 +567,75 @@ nav .sticky {
 
     }
 
-    /*ZONE QUOTIDIEN*/
+@media (max-width: 1110px) {
 
-    .au-quotidien{
+    .first-actu{
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-first-actu{
+        align-items: center;
+        margin-top: -70px;
+        margin-left: 20px;
+
+    }
+
+    .first-actu img {
+        width: 70%;
+        margin-left: 0px;
+
+    }
+
+    #category2{
+        font-size: 1.5rem;
+        margin-left: 25vw;
+
+    }
+    #title2{
+        font-size: 2rem;
+        margin-left: 15vw;
+    }
+
+    #category3{
+        font-size: 1.5rem;
+        margin-left: 25vw;
+
+    }
+    #title3{
+        font-size: 2rem;
+        margin-left: 15vw;
+    }
+
+    .secondary-actu img{
+        width:70%;
+        height:70%;
+        border-radius: 17px;
+        margin-left: 80px;
+    }
+
+    .second-actu{
+        margin : 0px;
+    }
+
+    .third-actu {
+        margin:0px;
+    }
+
+    .third-actu img{
+        width:70%;
+    margin-top: 80px;
+    }
+
+    .secondary-actu {
+        flex-direction: column;
+        align-content: center;
+    }
+
+}
+
+    /*ZONE Démarches*/
+
+    .demarches{
         background-color: #efefef;
         border-radius: 17px;
         width:90%;
@@ -575,7 +648,7 @@ nav .sticky {
 
     }
 
-.title-au-quotidien{;
+.title-demarches{;
     font-size: 35px;
     font-weight: bold;;
     z-index: 1000;
@@ -591,18 +664,18 @@ nav .sticky {
     justify-content: space-between;
 }
 
-.au-quotidien img{
+.demarches img{
     width:7vw;
     height:auto;
     box-sizing: border-box;
     margin : 0 25px;
 }
 
-.au-quotidien p{
+.demarches p{
     margin-top: 15px;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-align: center;
     color:#003c70;
 }
@@ -648,7 +721,7 @@ nav .sticky {
     justify-content: flex-start;
 }
 
-/*ZONE RESEAUX*/
+/*ZONE SUR LES RESEAUX*/
 
 .reseaux{
     background-color: #efefef;
@@ -701,6 +774,38 @@ nav .sticky {
     background-color: white;
     display: flex;
     flex-direction: column;
+}
+
+@media (max-width: 1300px) {
+    .publi{
+        display: flex;
+        flex-direction: column;
+        gap:50px;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 50px;
+    }
+
+    .publi1 iframe{
+        display: flex;
+        flex-direction: row;
+        width :500px;
+        height: 300px;
+        margin-bottom: 50px;
+    }
+    .publi2 iframe{
+        width : 300px;
+        height: 300px;
+        display: flex;
+        flex-direction: row;
+    }
+    .publi3 iframe{
+        width : 200px;
+        height: 400px;
+        display: flex;
+        flex-direction: row;
+    }
+
 }
 
 
@@ -761,44 +866,6 @@ nav .sticky {
         text-align: center;
     }
 
-    /* FORMULAIRE NEWSLETTER */
-
-    .newsletter-form{
-        width:100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .newsletter-form input[type="email"] {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 30px;
-        border: none;
-        border-radius: 5px;
-    }
-
-.newsletter-form input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 30px;
-    border: none;
-    border-radius: 5px;
-}
-
-    .newsletter-form button {
-        background-color: transparent;
-        color: #fff;
-        padding: 10px 20px;
-        border: 2px solid #fff;
-        border-radius: 8px;
-        cursor: pointer;
-    }
-
-    .newsletter-form button:hover {
-        background-color: transparent;
-        border: 2px solid #007bff;
-        color: #007bff;
-    }
 
 
 
@@ -812,9 +879,6 @@ nav .sticky {
     .social-icons li {
         margin-bottom: 10px;
     }
-
-
-
     .social-icons a {
         text-decoration: none;
         color: inherit;
@@ -824,6 +888,9 @@ nav .sticky {
         width: 25px;
         height: auto;
     }
+
+
+
 
 
     /************FOOTER AVEC LES PARTENARIATS ************/
@@ -897,7 +964,7 @@ nav .sticky {
         }
 
         .site-footer h4 {
-            font-size: 3rem;
+            font-size: 2rem;
             font-weight: bold;
             width:100%;
             text-align: center;
@@ -925,27 +992,10 @@ nav .sticky {
 
 
         .social-icons img {
-            width: 60px;
+            width: 40px;
             height: auto;
         }
 
-        .newsletter-form{
-            width:100%;
-        }
-        .newsletter-form input[type="email"] {
-            width: 80%;
-            font-size: 3rem;
-        }
-
-        .newsletter-form input[type="text"] {
-            width: 80%;
-            font-size: 3rem;
-        }
-
-        .newsletter-form button {
-            font-size: 2.5rem;
-            padding: 15px 25px;
-        }
 
         .partner-section {
             flex-direction: column-reverse;
@@ -959,75 +1009,26 @@ nav .sticky {
         }
 
         .partner-image {
-            width: 35%;
+            width: 23%;
             box-sizing: border-box;
 
         }
         #ademe {
-            width: 25%;
+            width: 15%;
         }
 
         .copyright-text {
             width: 100%;
-            font-size: 3rem;
+            font-size: 1.2rem;
             text-align: center;
         }
-
-
     }
 
 
 
 
 
-    /* Media query for screens with a maximum width of 768px
-    @media (max-width: 768px) {
-        header {
-            padding: 12px 20px;
-        }
 
-        .navbar-menu {
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            top: 60px;
-            left: 0;
-            background-color: #1B8CC1;
-            width: 100%;
-            z-index: 999;
-            text-align: center;
-        }
-
-        .navbar-menu.active {
-            display: flex;
-        }
-
-        .navbar-menu a {
-            color: white;
-            padding: 10px;
-        }
-
-        .navbar-buttons {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 10px;
-        }
-
-        .navbar-buttons button {
-            margin: 5px 0;
-        }
-
-        .dropdown .dropdown-menu {
-            margin-left: 0;
-        }
-
-        /* Add a mobile navigation icon
-        .navbar-mobile-icon {
-            display: block;
-            cursor: pointer;
-        }
-    }*/
 
 
 
